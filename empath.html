@@ -21,39 +21,47 @@
 			n-text="fontSize: 2; horizontalAlign: middle"
 			position="0 0 0.02" scale="0.2 0.2 0.2"n-cockpit-parent></a-mixin>
 		<a-mixin id="skeleton-bg"
-			position="0 0.5 0" rotation="0 180 0"
+			n-billboard position="0 0.5 0" rotation="0 180 0"
 		 	geometry="primitive: plane; width: 1; height: 0.5" material="color: black; opacity: 0.8"
 			n-skeleton-parent="part: head;" altspace-cursor-collider="enabled: true" 
 			sync sync-n-skeleton-parent></a-mixin>
 		<a-mixin id="skeleton-text1"
-			position="0 0.6 -0.02" rotation="0 180 0" scale="0.3 0.3 0.3" 
+			n-billboard position="0 0.6 -0.02" rotation="0 180 0" scale="0.3 0.3 0.3" 
 		 	n-text="fontSize: 2; horizontalAlign: middle; text: Would you rather...;"
 			n-skeleton-parent="part: head;" sync sync-n-skeleton-parent></a-mixin>
 		<a-mixin id="skeleton-button1"
-			position="-0.22 0.4 -0.02" rotation="0 180 0"
+			n-billboard position="-0.22 0.4 -0.02" rotation="0 180 0"
 		 	geometry="primitive: plane; width: 0.4; height: 0.1;" material="color: #1eced5"
 			n-skeleton-parent="part: head;" sync sync-n-skeleton-parent
 			altspace-cursor-collider="enabled: true"></a-mixin>
 		<a-mixin id="skeleton-button2"
-			position="0.22 0.4 -0.02" rotation="0 180 0"
+			n-billboard position="0.22 0.4 -0.02" rotation="0 180 0"
 		 	geometry="primitive: plane; width: 0.4; height: 0.1;" material="color: #1eced5"
 			n-skeleton-parent="part: head;" sync sync-n-skeleton-parent
 			altspace-cursor-collider="enabled: true"></a-mixin>
 		<a-mixin id="skeleton1-button1-text"
-			position="-0.22 0.4 -0.04" rotation="0 180 0" scale="0.2 0.2 0.2"
+			n-billboard position="-0.22 0.4 -0.04" rotation="0 180 0" scale="0.2 0.2 0.2"
 		 	n-text="fontSize: 2; horizontalAlign: middle; text: be invisible;"
 			n-skeleton-parent="part: head;" sync sync-n-skeleton-parent></a-mixin>
 		<a-mixin id="skeleton1-button2-text"
-			position="0.22 0.4 -0.04" rotation="0 180 0" scale="0.2 0.2 0.2"
+			n-billboard position="0.22 0.4 -0.04" rotation="0 180 0" scale="0.2 0.2 0.2"
 		 	n-text="fontSize: 2; horizontalAlign: middle; text: be able to fly;"
 			n-skeleton-parent="part: head;" sync sync-n-skeleton-parent></a-mixin>
 		<a-mixin id="skeleton2-button1-text"
-			position="-0.22 0.4 -0.04" rotation="0 180 0" scale="0.2 0.2 0.2"
+			n-billboard position="-0.22 0.4 -0.04" rotation="0 180 0" scale="0.2 0.2 0.2"
 		 	n-text="fontSize: 2; horizontalAlign: middle; text: be poor and admired;"
 			n-skeleton-parent="part: head;" sync sync-n-skeleton-parent></a-mixin>
 		<a-mixin id="skeleton2-button2-text"
-			position="0.22 0.4 -0.04" rotation="0 180 0" scale="0.2 0.2 0.2"
+			n-billboard position="0.22 0.4 -0.04" rotation="0 180 0" scale="0.2 0.2 0.2"
 		 	n-text="fontSize: 2; horizontalAlign: middle; text: be rich and hated;"
+			n-skeleton-parent="part: head;" sync sync-n-skeleton-parent></a-mixin>
+		<a-mixin id="skeleton3-button1-text"
+			n-billboard position="-0.22 0.4 -0.04" rotation="0 180 0" scale="0.2 0.2 0.2"
+		 	n-text="fontSize: 2; horizontalAlign: middle; text: option 1;"
+			n-skeleton-parent="part: head;" sync sync-n-skeleton-parent></a-mixin>
+		<a-mixin id="skeleton3-button2-text"
+			n-billboard position="0.22 0.4 -0.04" rotation="0 180 0" scale="0.2 0.2 0.2"
+		 	n-text="fontSize: 2; horizontalAlign: middle; text: option 2;"
 			n-skeleton-parent="part: head;" sync sync-n-skeleton-parent></a-mixin>
 	</a-assets>
 	
@@ -104,12 +112,12 @@
 		</a-entity>
 	</a-entity>
 	
-	<a-entity id="question1-bg" instantiator="on: open-skeleton; mixin: skeleton-bg" n-billboard></a-entity>
-	<a-entity id="question1-text" instantiator="on: open-skeleton; mixin: skeleton-text1" n-billboard></a-entity>
-	<a-entity id="question1-button1" instantiator="on: open-skeleton; mixin: skeleton-button1" n-billboard></a-entity>
-	<a-entity id="question1-button1-text" instantiator="on: open-skeleton; mixin: skeleton1-button1-text" n-billboard></a-entity>
-	<a-entity id="question1-button2" instantiator="on: open-skeleton; mixin: skeleton-button2" n-billboard></a-entity>
-	<a-entity id="question1-button2-text" instantiator="on: open-skeleton; mixin: skeleton1-button2-text" n-billboard></a-entity>	
+	<a-entity id="question1-bg" instantiator="on: open-skeleton; mixin: skeleton-bg"></a-entity>
+	<a-entity id="question1-text" instantiator="on: open-skeleton; mixin: skeleton-text1"></a-entity>
+	<a-entity id="question1-button1" instantiator="on: open-skeleton; mixin: skeleton-button1"></a-entity>
+	<a-entity id="question1-button1-text" instantiator="on: open-skeleton; mixin: skeleton1-button1-text"></a-entity>
+	<a-entity id="question1-button2" instantiator="on: open-skeleton; mixin: skeleton-button2"></a-entity>
+	<a-entity id="question1-button2-text" instantiator="on: open-skeleton; mixin: skeleton1-button2-text"></a-entity>	
 	
 	<!-- Set two -->
 	<a-entity id="cockpit2" position="0 0.6 -1" scale="0.0001 0.0001 0.0001" n-cockpit-parent>
@@ -159,12 +167,12 @@
 		</a-entity>
 	</a-entity>
 	
-	<a-entity id="question2-bg" instantiator="on: open-skeleton; mixin: skeleton-bg" n-billboard></a-entity>
-	<a-entity id="question2-text" instantiator="on: open-skeleton; mixin: skeleton-text1" n-billboard></a-entity>
-	<a-entity id="question2-button1" instantiator="on: open-skeleton; mixin: skeleton-button1" n-billboard></a-entity>
-	<a-entity id="question2-button1-text" instantiator="on: open-skeleton; mixin: skeleton2-button1-text" n-billboard></a-entity>
-	<a-entity id="question2-button2" instantiator="on: open-skeleton; mixin: skeleton-button2" n-billboard></a-entity>
-	<a-entity id="question2-button2-text" instantiator="on: open-skeleton; mixin: skeleton2-button2-text" n-billboard></a-entity>	
+	<a-entity id="question2-bg" instantiator="on: open-skeleton; mixin: skeleton-bg"></a-entity>
+	<a-entity id="question2-text" instantiator="on: open-skeleton; mixin: skeleton-text1"></a-entity>
+	<a-entity id="question2-button1" instantiator="on: open-skeleton; mixin: skeleton-button1"></a-entity>
+	<a-entity id="question2-button1-text" instantiator="on: open-skeleton; mixin: skeleton2-button1-text"></a-entity>
+	<a-entity id="question2-button2" instantiator="on: open-skeleton; mixin: skeleton-button2"></a-entity>
+	<a-entity id="question2-button2-text" instantiator="on: open-skeleton; mixin: skeleton2-button2-text"></a-entity>	
 	
 </a-scene>
 </body>
