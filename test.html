@@ -82,7 +82,7 @@
 	</a-entity>
 	
 	<a-entity id="skeleton1" position="0 0.5 0" rotation="0 180 0" instantiator="on: open-skeleton; mixin: skeleton-bg skeleton-text skeleton-button skeleton-button-text" sync n-skeleton-parent="part: head;" sync-transform>
-		<a-animation attribute="scale" delay="10000" dur="1" from="1 1 1" to="0.0001 0.0001 0.0001" fill="forwards" direction="normal" repeat="0"></a-animation>
+		<a-animation attribute="scale" delay="1000000" dur="1" from="1 1 1" to="0.0001 0.0001 0.0001" fill="forwards" direction="normal" repeat="0"></a-animation>
 		<a-entity mixin="skeleton-bg" instantiator="on: click; mixin: skeleton-bg"></a-entity>
 		<a-entity mixin="skeleton-text" n-text="text: Would you rather...;" instantiator="on: click; mixin: skeleton-text"></a-entity>
 		<a-entity mixin="skeleton-button" position="-0.22 -0.1 0.02" instantiator="on: click; mixin: skeleton-button">
