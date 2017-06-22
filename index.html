@@ -18,11 +18,11 @@
             n-text="fontSize: 2; horizontalAlign: middle"
             position="0 0.07 0.02" scale="0.3 0.3 0.3" n-cockpit-parent></a-mixin>
 		<a-mixin id="cockpit-button"
-            geometry="primitive: plane; width: 1; height: 0.3;" material="color: #1eced5"
+            geometry="primitive: plane; width: 0.4; height: 0.1;" material="color: #1eced5"
             n-cockpit-parent altspace-cursor-collider="enabled: true"></a-mixin>
         <a-mixin id="cockpit-button-text"
             n-text="fontSize: 2; horizontalAlign: middle"
-            position="0 0 0.02" scale="0.8 0.8 0.8"n-cockpit-parent></a-mixin>
+            position="0 0 0.02" scale="0.3 0.3 0.3"n-cockpit-parent></a-mixin>
         <a-mixin id="cockpit-close"
             wire="on: click; emit: close-cockpit; targets: #cockpit"></a-mixin>
 		<a-mixin id="cockpit-open"
@@ -62,8 +62,8 @@
 			<a-entity mixin="cockpit-button-text" position="0 0 0.02" n-text="text: be invisible;"></a-entity>
 		</a-entity>		
 		<a-entity
-			position="0 -1.5 0"
-			scale="0.15 0.15 0.15"
+			position="0 -0.55 0"
+			scale="0.05 0.05 0.05"
 			geometry="primitive: circle" material="transparent: true; src: #close"
 			n-cockpit-parent altspace-cursor-collider="enabled: true"
 		  	wire="on: click; emit: close-cockpit; targets: #cockpit1">
