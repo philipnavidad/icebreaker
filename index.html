@@ -77,8 +77,8 @@
 		<a-animation attribute="scale" begin="close-confirmation" dur="1" from="1 1 1" to="0.0001 0.0001 0.0001" fill="forwards" direction="normal" repeat="0"></a-animation>
 		<a-animation attribute="scale" delay="10000" dur="1" from="1 1 1" to="0.0001 0.0001 0.0001" fill="forwards" direction="normal" repeat="0"></a-animation>
 		<a-entity mixin="cockpit-bg"></a-entity>
-		<a-entity mixin="cockpit-text" n-text="text: <b>GOOD CHOICE!</b><br>The next question will be<br>revealed when someone<br>guesses your answer;"></a-entity>
-		<a-entity mixin="cockpit-button" position="0 -0.1 0.02"
+		<a-entity mixin="cockpit-text" position="0 -0.1 0" n-text="text: <b>GOOD CHOICE!</b><br>The next question will be<br>revealed when someone<br>guesses your answer;"></a-entity>
+		<a-entity mixin="cockpit-button" position="0 -0.2 0.02"
 			wire="on: click; emit: close-confirmation; targets: #confirmation1;">
 			<a-entity mixin="cockpit-button-text" position="0 0 0.02" n-text="text: Got it;"></a-entity>
 		</a-entity>		
@@ -157,8 +157,8 @@
 		<a-animation attribute="scale" begin="close-confirmation" dur="1" from="1 1 1" to="0.0001 0.0001 0.0001" fill="forwards" direction="normal" repeat="0"></a-animation>
 		<a-animation attribute="scale" delay="10000" dur="1" from="1 1 1" to="0.0001 0.0001 0.0001" fill="forwards" direction="normal" repeat="0"></a-animation>
 		<a-entity mixin="cockpit-bg"></a-entity>
-		<a-entity mixin="cockpit-text" n-text="text: <b>GOOD CHOICE!</b><br>The next question will be<br>revealed when someone<br>guesses your answer;"></a-entity>
-		<a-entity mixin="cockpit-button" position="0 -0.1 0.02"
+		<a-entity mixin="cockpit-text" position="0 -0.1 0.02" n-text="text: <b>GOOD CHOICE!</b><br>The next question will be<br>revealed when someone<br>guesses your answer;"></a-entity>
+		<a-entity mixin="cockpit-button" position="0 -0.2 0.02"
 			wire="on: click; emit: close-confirmation; targets: #confirmation1;">
 			<a-entity mixin="cockpit-button-text" position="0 0 0.02" n-text="text: Got it;"></a-entity>
 		</a-entity>		
