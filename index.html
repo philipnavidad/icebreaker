@@ -58,7 +58,8 @@
 		<a-entity mixin="cockpit-button-text" position="-0.25 -0.25 0.01" n-text="text: be able to fly;"></a-entity>
 		<a-entity mixin="cockpit-button" position="0.25 -0.25 0.01"
 			wire="on: click; emit: open-skeleton; targets: #skeleton1;"
-			wire="on: click; emit: close-cockpit; targets: #cockpit1;"></a-entity>	
+			wire="on: click; emit: close-cockpit; targets: #cockpit1;"
+		  	wire__toggle="on: click; emit: skeleton1-toggle; target: #skeleton1"></a-entity>	
 			<a-entity mixin="cockpit-button-text" position="0.25 -0.25 0.01" n-text="text: be invisible;"></a-entity>
 		<a-entity
 			position="0 -0.55 0"
@@ -67,7 +68,7 @@
 			n-cockpit-parent altspace-cursor-collider="enabled: true"
 		  	wire="on: click; emit: close-cockpit; targets: #cockpit1"></a-entity>
 	</a-entity>
-	<a-entity id="skeleton1" scale="0.0001 0.0001 0.0001" n-skeleton-parent="part: head;" sync sync-n-skeleton-parent>
+	<a-entity id="skeleton1" scale="0.0001 0.0001 0.0001" n-skeleton-parent="part: head;" sync="own-on: skeleton1-toggle" sync-n-skeleton-parent>
         <a-animation attribute="scale" begin="open-skeleton" dur="1" from="0.0001 0.0001 0.0001" to="1 1 1" fill="forwards" direction="normal" repeat="0"></a-animation>
         <a-animation attribute="scale" begin="close-skeleton" dur="1" from="1 1 1" to="0.0001 0.0001 0.0001" fill="forwards" direction="normal" repeat="0"></a-animation>
 		<a-entity mixin="skeleton-bg">
