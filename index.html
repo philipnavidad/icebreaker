@@ -51,14 +51,14 @@
 		<a-entity mixin="cockpit-text" n-text="text: Would you rather...;"></a-entity>
 		<a-entity mixin="cockpit-button" position="-0.22 -0.1 0.02"
 			wire="on: click; emit: open-skeleton; targets: #skeleton1;"
-			wire__toggle="on: click; emit: close-cockpit; targets: #cockpit1;"
-			wire__toggle="on: click; emit: open-answer; targets: #answer1a;">
+			wire__close="on: click; emit: close-cockpit; targets: #cockpit1;"
+			wire__open="on: click; emit: open-answer; targets: #answer1a;">
 			<a-entity mixin="cockpit-button-text" position="0 0 0.02" n-text="text: be able to fly;"></a-entity>
 		</a-entity>	
 		<a-entity mixin="cockpit-button" position="0.22 -0.1 0.02"
 			wire="on: click; emit: open-skeleton; targets: #skeleton1;"
-			wire__toggle="on: click; emit: close-cockpit; targets: #cockpit1;"
-		  	wire__toggle="on: click; emit: open-answer; targets: #answer1b;">
+			wire__close="on: click; emit: close-cockpit; targets: #cockpit1;"
+		  	wire__open="on: click; emit: open-answer; targets: #answer1b;">
 			<a-entity mixin="cockpit-button-text" position="0 0 0.02" n-text="text: be invisible;"></a-entity>
 		</a-entity>		
 		<a-entity
@@ -77,14 +77,14 @@
 		<a-entity mixin="skeleton-text" n-text="text: Would you rather...;"></a-entity>
 		<a-entity mixin="skeleton-button" position="-0.22 -0.1 0.02"
 			wire="on: click; emit: close-skeleton; targets: #skeleton1;"
-			wire__toggle="on: click; emit: open-cockpit; targets: #cockpit2;"
-		  	wire__toggle="on: click; emit: close-answer; targets: #answer1a, #answer1b;">
+			wire__close="on: click; emit: open-cockpit; targets: #cockpit2;"
+		  	wire__open="on: click; emit: close-answer; targets: #answer1a, #answer1b;">
 			<a-entity mixin="skeleton-button-text" position="0 0 0.02" n-text="text: be able to fly;"></a-entity>
 		</a-entity>	
 		<a-entity mixin="skeleton-button" position="0.22 -0.1 0.02"
 			wire="on: click; emit: close-skeleton; targets: #skeleton1;"
-			wire__toggle="on: click; emit: open-cockpit; targets: #cockpit2;"
-		  	wire__toggle="on: click; emit: close-answer; targets: #answer1a, #answer1b;">
+			wire__close="on: click; emit: open-cockpit; targets: #cockpit2;"
+		  	wire__open="on: click; emit: close-answer; targets: #answer1a, #answer1b;">
 			<a-entity mixin="skeleton-button-text" position="0 0 0.02" n-text="text: be invisible;"></a-entity>
 		</a-entity>		
 	</a-entity>
@@ -109,14 +109,14 @@
 		<a-entity mixin="cockpit-text" n-text="text: Would you rather...;"></a-entity>
 		<a-entity mixin="cockpit-button" position="-0.22 -0.1 0.02"
 			wire="on: click; emit: open-skeleton; targets: #skeleton2;"
-			wire__toggle="on: click; emit: close-cockpit; targets: #cockpit2;"
-			wire__toggle="on: click; emit: open-answer; targets: #answer2a;">
+			wire__close="on: click; emit: close-cockpit; targets: #cockpit2;"
+			wire__open="on: click; emit: open-answer; targets: #answer2a;">
 			<a-entity mixin="cockpit-button-text" position="0 0 0.02" n-text="text: eat poop;"></a-entity>
 		</a-entity>	
 		<a-entity mixin="cockpit-button" position="0.22 -0.1 0.02"
 			wire="on: click; emit: open-skeleton; targets: #skeleton2;"
-			wire__toggle="on: click; emit: close-cockpit; targets: #cockpit2;"
-		  	wire__toggle="on: click; emit: open-answer; targets: #answer2b;">
+			wire__close="on: click; emit: close-cockpit; targets: #cockpit2;"
+		  	wire__open="on: click; emit: open-answer; targets: #answer2b;">
 			<a-entity mixin="cockpit-button-text" position="0 0 0.02" n-text="text: eat boogers;"></a-entity>
 		</a-entity>		
 		<a-entity
@@ -135,14 +135,14 @@
 		<a-entity mixin="skeleton-text" n-text="text: Would you rather...;"></a-entity>
 		<a-entity mixin="skeleton-button" position="-0.22 -0.1 0.02"
 			wire="on: click; emit: close-skeleton; targets: #skeleton2;"
-			wire__toggle="on: click; emit: open-cockpit; targets: #cockpit3;"
-		  	wire__toggle="on: click; emit: close-answer; targets: #answer2a, #answer2b;">
+			wire__close="on: click; emit: open-cockpit; targets: #cockpit3;"
+		  	wire__open="on: click; emit: close-answer; targets: #answer2a, #answer2b;">
 			<a-entity mixin="skeleton-button-text" position="0 0 0.02" n-text="text: eat poop;"></a-entity>
 		</a-entity>	
 		<a-entity mixin="skeleton-button" position="0.22 -0.1 0.02"
 			wire="on: click; emit: close-skeleton; targets: #skeleton2;"
-			wire__toggle="on: click; emit: open-cockpit; targets: #cockpit3;"
-		  	wire__toggle="on: click; emit: close-answer; targets: #answer2a, #answer2b;">
+			wire__close="on: click; emit: open-cockpit; targets: #cockpit3;"
+		  	wire__open="on: click; emit: close-answer; targets: #answer2a, #answer2b;">
 			<a-entity mixin="skeleton-button-text" position="0 0 0.02" n-text="text: eat boogers;"></a-entity>
 		</a-entity>		
 	</a-entity>
