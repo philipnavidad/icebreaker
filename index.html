@@ -5,7 +5,7 @@
 <script src="https://cdn.rawgit.com/AltspaceVR/AltspaceSDK/v2.4.2/dist/altspace.min.js"></script>
 </head>
 <body>
-<a-scene altspace="fullspace: true" sync-system="author: phil; app: icebreaker;>
+<a-scene altspace="fullspace: true" sync-system="author: phil; app: icebreaker">
     <a-assets>
         <img id="close" src="icon-close.png">
         <a-mixin id="cockpit-bg"
@@ -108,7 +108,6 @@
 		  	wire="on: click; emit: close-cockpit; targets: #cockpit2">
 		</a-entity>
 	</a-entity>
-
 </a-scene>
 </body>
 </html>
