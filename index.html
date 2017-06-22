@@ -52,13 +52,15 @@
 		<a-entity mixin="cockpit-button" position="-0.22 -0.1 0.02"
 			wire="on: click; emit: open-skeleton; targets: #skeleton1;"
 			wire__close="on: click; emit: close-cockpit; targets: #cockpit1;"
-			wire__open="on: click; emit: open-answer; targets: #answer1a;">
+			wire__open="on: click; emit: open-answer; targets: #answer1a;"
+		  	wire__confirmation="on: click; emit: open-confirmation; targets: #confirmation1;>
 			<a-entity mixin="cockpit-button-text" position="0 0 0.02" n-text="text: be able to fly;"></a-entity>
 		</a-entity>	
 		<a-entity mixin="cockpit-button" position="0.22 -0.1 0.02"
 			wire="on: click; emit: open-skeleton; targets: #skeleton1;"
 			wire__close="on: click; emit: close-cockpit; targets: #cockpit1;"
-		  	wire__open="on: click; emit: open-answer; targets: #answer1b;">
+		  	wire__open="on: click; emit: open-answer; targets: #answer1b;"
+		      	wire__confirmation="on: click; emit: open-confirmation; targets: #confirmation1;>
 			<a-entity mixin="cockpit-button-text" position="0 0 0.02" n-text="text: be invisible;"></a-entity>
 		</a-entity>		
 		<a-entity
@@ -67,6 +69,25 @@
 			geometry="primitive: circle" material="transparent: true; src: #close"
 			n-cockpit-parent altspace-cursor-collider="enabled: true"
 			wire="on: click; emit: close-cockpit; targets: #cockpit1">
+		</a-entity>
+	</a-entity>
+	
+	<a-entity id="confirmation1" position="0 0.6 -1" scale="0.0001 0.0001 0.0001" n-cockpit-parent>
+		<a-animation attribute="scale" begin="open-confirmation" dur="1" from="0.0001 0.0001 0.0001" to="1 1 1" fill="forwards" direction="normal" repeat="0"></a-animation>
+		<a-animation attribute="scale" begin="close-confirmation" dur="1" from="1 1 1" to="0.0001 0.0001 0.0001" fill="forwards" direction="normal" repeat="0"></a-animation>
+		<a-animation attribute="scale" delay="10000" dur="1" from="1 1 1" to="0.0001 0.0001 0.0001" fill="forwards" direction="normal" repeat="0"></a-animation>
+		<a-entity mixin="cockpit-bg"></a-entity>
+		<a-entity mixin="cockpit-text" n-text="text: Good choice! The next question will be<br>revealed when someone guesses your answer;"></a-entity>
+		<a-entity mixin="cockpit-button" position="0 -0.1 0.02"
+			wire="on: click; emit: close-confirmation; targets: #confirmation1;">
+			<a-entity mixin="cockpit-button-text" position="0 0 0.02" n-text="text: Got it;"></a-entity>
+		</a-entity>		
+		<a-entity
+			position="0 -0.35 0"
+			scale="0.05 0.05 0.05"
+			geometry="primitive: circle" material="transparent: true; src: #close"
+			n-cockpit-parent altspace-cursor-collider="enabled: true"
+			wire="on: click; emit: close-confirmation; targets: #confirmation1">
 		</a-entity>
 	</a-entity>
 	
@@ -91,32 +112,35 @@
 	<a-entity id="answer1a" scale="0.0001 0.0001 0.0001" position="0 0.5 0" rotation="0 180 0" n-skeleton-parent="part: head;" sync sync-transform>
 		<a-animation attribute="scale" begin="open-answer" dur="1" from="0.0001 0.0001 0.0001" to="1 1 1" fill="forwards" direction="normal" repeat="0"></a-animation>
 		<a-animation attribute="scale" begin="close-answer" delay="5000" dur="1" from="1 1 1" to="0.0001 0.0001 0.0001" fill="forwards" direction="normal" repeat="0"></a-animation>
-		<a-entity mixin="skeleton-button" position="-0.22 -0.1 0.018" material="color: red">
+		<a-entity mixin="skeleton-button" position="-0.22 -0.1 0.018">
 			<a-entity mixin="skeleton-button-text" position="0 0 0.019" n-text="text: be able to fly;"></a-entity>
 		</a-entity>			
 	</a-entity>
 	<a-entity id="answer1b" scale="0.0001 0.0001 0.0001" position="0 0.5 0" rotation="0 180 0" n-skeleton-parent="part: head;" sync sync-transform>
 		<a-animation attribute="scale" begin="open-answer" dur="1" from="0.0001 0.0001 0.0001" to="1 1 1" fill="forwards" direction="normal" repeat="0"></a-animation>
 		<a-animation attribute="scale" begin="close-answer" delay="5000" dur="1" from="1 1 1" to="0.0001 0.0001 0.0001" fill="forwards" direction="normal" repeat="0"></a-animation>
-		<a-entity mixin="skeleton-button" position="0.22 -0.1 0.018" material="color: red">
+		<a-entity mixin="skeleton-button" position="0.22 -0.1 0.018">
 			<a-entity mixin="skeleton-button-text" position="0 0 0.019" n-text="text: be invisible;"></a-entity>
 		</a-entity>		
 	</a-entity>
 	
 	<a-entity id="cockpit2" position="0 0.6 -1" scale="0.0001 0.0001 0.0001" n-cockpit-parent>
+		<a-animation attribute="scale" begin="open-cockpit" dur="1" from="0.0001 0.0001 0.0001" to="1 1 1" fill="forwards" direction="normal" repeat="0"></a-animation>
 		<a-animation attribute="scale" begin="close-cockpit" dur="1" from="1 1 1" to="0.0001 0.0001 0.0001" fill="forwards" direction="normal" repeat="0"></a-animation>
 		<a-entity mixin="cockpit-bg"></a-entity>
 		<a-entity mixin="cockpit-text" n-text="text: Would you rather...;"></a-entity>
 		<a-entity mixin="cockpit-button" position="-0.22 -0.1 0.02"
 			wire="on: click; emit: open-skeleton; targets: #skeleton2;"
 			wire__close="on: click; emit: close-cockpit; targets: #cockpit2;"
-			wire__open="on: click; emit: open-answer; targets: #answer2a;">
+			wire__open="on: click; emit: open-answer; targets: #answer2a;"
+		      	wire__confirmation="on: click; emit: open-confirmation; targets: #confirmation2;>
 			<a-entity mixin="cockpit-button-text" position="0 0 0.02" n-text="text: eat poop;"></a-entity>
 		</a-entity>	
 		<a-entity mixin="cockpit-button" position="0.22 -0.1 0.02"
 			wire="on: click; emit: open-skeleton; targets: #skeleton2;"
 			wire__close="on: click; emit: close-cockpit; targets: #cockpit2;"
-		  	wire__open="on: click; emit: open-answer; targets: #answer2b;">
+		  	wire__open="on: click; emit: open-answer; targets: #answer2b;"
+		      	wire__confirmation="on: click; emit: open-confirmation; targets: #confirmation2;>
 			<a-entity mixin="cockpit-button-text" position="0 0 0.02" n-text="text: eat boogers;"></a-entity>
 		</a-entity>		
 		<a-entity
@@ -125,6 +149,25 @@
 			geometry="primitive: circle" material="transparent: true; src: #close"
 			n-cockpit-parent altspace-cursor-collider="enabled: true"
 			wire="on: click; emit: close-cockpit; targets: #cockpit2">
+		</a-entity>
+	</a-entity>
+	
+	<a-entity id="confirmation2" position="0 0.6 -1" scale="0.0001 0.0001 0.0001" n-cockpit-parent>
+		<a-animation attribute="scale" begin="open-confirmation" dur="1" from="0.0001 0.0001 0.0001" to="1 1 1" fill="forwards" direction="normal" repeat="0"></a-animation>
+		<a-animation attribute="scale" begin="close-confirmation" dur="1" from="1 1 1" to="0.0001 0.0001 0.0001" fill="forwards" direction="normal" repeat="0"></a-animation>
+		<a-animation attribute="scale" delay="10000" dur="1" from="1 1 1" to="0.0001 0.0001 0.0001" fill="forwards" direction="normal" repeat="0"></a-animation>
+		<a-entity mixin="cockpit-bg"></a-entity>
+		<a-entity mixin="cockpit-text" n-text="text: Good choice! The next question will be<br>revealed when someone guesses your answer;"></a-entity>
+		<a-entity mixin="cockpit-button" position="0 -0.1 0.02"
+			wire="on: click; emit: close-confirmation; targets: #confirmation1;">
+			<a-entity mixin="cockpit-button-text" position="0 0 0.02" n-text="text: Got it;"></a-entity>
+		</a-entity>		
+		<a-entity
+			position="0 -0.35 0"
+			scale="0.05 0.05 0.05"
+			geometry="primitive: circle" material="transparent: true; src: #close"
+			n-cockpit-parent altspace-cursor-collider="enabled: true"
+			wire="on: click; emit: close-confirmation; targets: #cockpit2">
 		</a-entity>
 	</a-entity>
 	
@@ -149,14 +192,14 @@
 	<a-entity id="answer2a" scale="0.0001 0.0001 0.0001" position="0 0.5 0" rotation="0 180 0" n-skeleton-parent="part: head;" sync sync-transform>
 		<a-animation attribute="scale" begin="open-answer" dur="1" from="0.0001 0.0001 0.0001" to="1 1 1" fill="forwards" direction="normal" repeat="0"></a-animation>
 		<a-animation attribute="scale" begin="close-answer" delay="5000" dur="1" from="1 1 1" to="0.0001 0.0001 0.0001" fill="forwards" direction="normal" repeat="0"></a-animation>
-		<a-entity mixin="skeleton-button" position="-0.22 -0.1 0.01" material="color: red">
+		<a-entity mixin="skeleton-button" position="-0.22 -0.1 0.01">
 			<a-entity mixin="skeleton-button-text" position="0 0 0.01" n-text="text: eat poop;"></a-entity>
 		</a-entity>			
 	</a-entity>
 	<a-entity id="answer2b" scale="0.0001 0.0001 0.0001" position="0 0.5 0" rotation="0 180 0" n-skeleton-parent="part: head;" sync sync-transform>
 		<a-animation attribute="scale" begin="open-answer" dur="1" from="0.0001 0.0001 0.0001" to="1 1 1" fill="forwards" direction="normal" repeat="0"></a-animation>
 		<a-animation attribute="scale" begin="close-answer" delay="5000" dur="1" from="1 1 1" to="0.0001 0.0001 0.0001" fill="forwards" direction="normal" repeat="0"></a-animation>
-		<a-entity mixin="skeleton-button" position="0.22 -0.1 0.01" material="color: red">
+		<a-entity mixin="skeleton-button" position="0.22 -0.1 0.01">
 			<a-entity mixin="skeleton-button-text" position="0 0 0.01" n-text="text: eat boogers;"></a-entity>
 		</a-entity>		
 	</a-entity>
