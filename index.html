@@ -52,17 +52,17 @@
         <a-animation attribute="scale" begin="close-cockpit" dur="1" from="1 1 1" to="0.0001 0.0001 0.0001" fill="forwards" direction="normal" repeat="0"></a-animation>
         <a-entity mixin="cockpit-bg"></a-entity>
 		<a-entity mixin="cockpit-text" n-text="text: Would you rather...;"></a-entity>
-		<a-entity mixin="cockpit-button" position="-0.6 -0.4 0.02"
+		<a-entity mixin="cockpit-button" position="-0.2 -0.1 0.02"
 			wire="on: click; emit: open-skeleton; targets: #skeleton1;"
 			wire__toggle="on: click; emit: close-cockpit; targets: #cockpit1;">
 			<a-entity mixin="cockpit-button-text" position="0 0 0.02" n-text="text: be able to fly;"></a-entity>
 		</a-entity>	
-		<a-entity mixin="cockpit-button" position="0.6 -0.4 0.02"
+		<a-entity mixin="cockpit-button" position="0.2 -0.1 0.02"
 			wire="on: click; emit: open-skeleton; targets: #skeleton1;">
 			<a-entity mixin="cockpit-button-text" position="0 0 0.02" n-text="text: be invisible;"></a-entity>
 		</a-entity>		
 		<a-entity
-			position="0 -0.55 0"
+			position="0 -0.4 0"
 			scale="0.05 0.05 0.05"
 			geometry="primitive: circle" material="transparent: true; src: #close"
 			n-cockpit-parent altspace-cursor-collider="enabled: true"
