@@ -20,14 +20,6 @@
 		<a-mixin id="cockpit-button-text"
 			n-text="fontSize: 2; horizontalAlign: middle"
 			position="0 0 0.02" scale="0.2 0.2 0.2"n-cockpit-parent></a-mixin>
-		<a-mixin id="cockpit-close"
-			wire="on: click; emit: close-cockpit; targets: #cockpit"></a-mixin>
-		<a-mixin id="cockpit-open"
-			wire="on: click; emit: open-cockpit; targets: #cockpit"></a-mixin>
-		<a-mixin id="skeleton-close"
-			wire="on: click; emit: close-skeleton; targets: #skeleton"></a-mixin>
-		<a-mixin id="skeleton-open"
-			wire="on: click; emit: open-skeleton; targets: #skeleton"></a-mixin>
 		<a-mixin id="skeleton-bg"
 			geometry="primitive: plane; width: 1; height: 0.5" material="color: black; opacity: 0.8"
 			n-skeleton-parent="part: head;" altspace-cursor-collider="enabled: true" 
@@ -50,10 +42,9 @@
 		<a-entity mixin="cockpit-bg"></a-entity>
 		<a-entity mixin="cockpit-text" n-text="text: Would you rather...;"></a-entity>
 		<a-entity mixin="cockpit-button" position="-0.22 -0.1 0.02"
-		  	instantiator="on: click; mixin: skeleton-bg skeleton-text skeleton-button skeleton-button-text"
 			wire="on: click; emit: open-skeleton; targets: #skeleton1;"
 			wire__close="on: click; emit: close-cockpit; targets: #cockpit1;"
-			wire__open="on: click; emit: open-answer; targets: #answer1a;"
+			wire__open="on: click; emit: open; targets: #skeleton1;"
 		  	wire__confirmation="on: click; emit: open-confirmation; targets: #confirmation1;">
 			<a-entity mixin="cockpit-button-text" position="0 0 0.02" n-text="text: be able to fly;"></a-entity>
 		</a-entity>	
@@ -92,7 +83,7 @@
 		</a-entity>
 	</a-entity>
 	
-	<a-entity id="skeleton1" scale="0.0001 0.0001 0.0001" position="0 0.5 0" rotation="0 180 0" sync n-skeleton-parent="part: head;" sync-transform>
+	<a-entity id="skeleton1" scale="0.0001 0.0001 0.0001" position="0 0.5 0" rotation="0 180 0" instantiator="on: open; mixin: skeleton-bg skeleton-text skeleton-button skeleton-button-text" sync n-skeleton-parent="part: head;" sync-transform>
 		<a-animation attribute="scale" begin="open-skeleton" dur="1" from="0.0001 0.0001 0.0001" to="1 1 1" fill="forwards" direction="normal" repeat="0"></a-animation>
 		<a-animation attribute="scale" begin="close-skeleton" dur="1" from="1 1 1" to="0.0001 0.0001 0.0001" fill="forwards" direction="normal" repeat="0"></a-animation>
 		<a-entity mixin="skeleton-bg" instantiator="on: click; mixin: skeleton-bg"></a-entity>
