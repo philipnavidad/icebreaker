@@ -22,7 +22,7 @@
             n-cockpit-parent altspace-cursor-collider="enabled: true"></a-mixin>
         <a-mixin id="cockpit-button-text"
             n-text="fontSize: 2; horizontalAlign: middle"
-            position="0 0 0.02" scale="0.3 0.3 0.3" n-cockpit-parent></a-mixin>
+            position="0 0 0.02" n-cockpit-parent></a-mixin>
         <a-mixin id="cockpit-close"
             wire="on: click; emit: close-cockpit; targets: #cockpit"></a-mixin>
 		<a-mixin id="cockpit-open"
@@ -52,7 +52,7 @@
         <a-animation attribute="scale" begin="close-cockpit" dur="1" from="1 1 1" to="0.0001 0.0001 0.0001" fill="forwards" direction="normal" repeat="0"></a-animation>
         <a-entity mixin="cockpit-bg"></a-entity>
 		<a-entity mixin="cockpit-text" n-text="text: Would you rather...;"</a-entity>
-		<a-entity mixin="cockpit-button" position="-0.25 -0.25 0.01" scale="0.3 0.3 0.3"
+		<a-entity mixin="cockpit-button" position="-0.25 -0.25 0.01"
 			wire="on: click; emit: open-skeleton; targets: #skeleton1;"
 			wire__toggle="on: click; emit: close-cockpit; targets: #cockpit1;"></a-entity>	
 		<a-entity mixin="cockpit-button-text" position="-0.25 -0.25 0.01" n-text="text: be able to fly;"></a-entity>
