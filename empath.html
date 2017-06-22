@@ -113,7 +113,7 @@
 	
 	<!-- Set two -->
 	<a-entity id="cockpit2" position="0 0.6 -1" scale="0.0001 0.0001 0.0001" n-cockpit-parent>
-		<a-animation attribute="scale" begin="open-cockpit" dur="1" from="0.0001 0.0001 0.0001" to="1 1 1" fill="forwards" direction="normal" repeat="0"></a-animation>
+		<a-animation attribute="scale" begin="open-cockpit" delay="60000" dur="1" from="0.0001 0.0001 0.0001" to="1 1 1" fill="forwards" direction="normal" repeat="0"></a-animation>
 		<a-animation attribute="scale" begin="close-cockpit" dur="1" from="1 1 1" to="0.0001 0.0001 0.0001" fill="forwards" direction="normal" repeat="0"></a-animation>
 		<a-entity mixin="cockpit-bg"></a-entity>
 		<a-entity mixin="cockpit-text" n-text="text: Would you rather...;"></a-entity>
