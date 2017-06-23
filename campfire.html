@@ -73,11 +73,11 @@
 			n-skeleton-parent="part: head;" sync sync-n-skeleton-parent></a-mixin>
 		<a-mixin id="skeleton5-button1-text"
 			position="0.22 0.4 -0.04" rotation="0 180 0" scale="0.2 0.2 0.2"
-		 	n-text="fontSize: 2; horizontalAlign: middle; text: option 1;"
+		 	n-text="fontSize: 2; horizontalAlign: middle; text: drink spoiled milk;"
 			n-skeleton-parent="part: head;" sync sync-n-skeleton-parent></a-mixin>
 		<a-mixin id="skeleton5-button2-text"
 			position="-0.22 0.4 -0.04" rotation="0 180 0" scale="0.2 0.2 0.2"
-		 	n-text="fontSize: 2; horizontalAlign: middle; text: option 2;"
+		 	n-text="fontSize: 2; horizontalAlign: middle; text: eat moldy bread;"
 			n-skeleton-parent="part: head;" sync sync-n-skeleton-parent></a-mixin>
 	</a-assets>
 	
@@ -112,30 +112,28 @@
 	<a-entity id="menu1" position="0 0.6 -1" scale="0.0001 0.0001 0.0001" n-cockpit-parent>
 		<a-animation attribute="scale" begin="toggle-menu" dur="1" from="0.0001 0.0001 0.0001" to="1 1 1" fill="forwards" direction="alternate" repeat="0"></a-animation>
 		<a-animation attribute="scale" begin="close" dur="1" from="1 1 1" to="0.0001 0.0001 0.0001" fill="forwards" direction="normal" repeat="0"></a-animation>
-		<a-entity id="cockpit1">
-			<a-entity mixin="cockpit-bg"></a-entity>
-			<a-entity mixin="cockpit-text" n-text="text: Would you rather...;"></a-entity>
-			<a-entity mixin="cockpit-button" position="-0.22 -0.1 0.02"
-				wire="on: click; emit: open-skeleton; targets: #question1-bg, #question1-text, #question1-button2, #question1-button1-text, #question1-button2-text;"
-				wire__close="on: click; emit: close; targets: #menu1-button, #menu1;"
-				wire__next="on: click; emit: open; targets: #menu2-button;"
-				wire__confirmation="on: click; emit: open-confirmation; targets: #confirmation;">
-				<a-entity mixin="cockpit-button-text" position="0 0 0.02" n-text="text: be able to fly;"></a-entity>
-			</a-entity>	
-			<a-entity mixin="cockpit-button" position="0.22 -0.1 0.02"
-				wire="on: click; emit: open-skeleton; targets: #question1-bg, #question1-text, #question1-button1-text, #question1-button1, #question1-button2-text;"
-				wire__close="on: click; emit: close; targets: #menu1-button, #menu1;"
-				wire__next="on: click; emit: open; targets: #menu2-button;"
-				wire__confirmation="on: click; emit: open-confirmation; targets: #confirmation;">
-				<a-entity mixin="cockpit-button-text" position="0 0 0.02" n-text="text: be invisible;"></a-entity>
-			</a-entity>		
-			<a-entity
-				position="0 -0.35 0"
-				scale="0.05 0.05 0.05"
-				geometry="primitive: circle" material="transparent: true; src: #close"
-				n-cockpit-parent altspace-cursor-collider="enabled: true"
-				wire="on: click; emit: toggle-menu; targets: #menu1">
-			</a-entity>
+		<a-entity mixin="cockpit-bg"></a-entity>
+		<a-entity mixin="cockpit-text" n-text="text: Would you rather...;"></a-entity>
+		<a-entity mixin="cockpit-button" position="-0.22 -0.1 0.02"
+			wire="on: click; emit: open-skeleton; targets: #question1-bg, #question1-text, #question1-button2, #question1-button1-text, #question1-button2-text;"
+			wire__close="on: click; emit: close; targets: #menu1-button, #menu1;"
+			wire__next="on: click; emit: open; targets: #menu2-button;"
+			wire__confirmation="on: click; emit: open-confirmation; targets: #confirmation;">
+			<a-entity mixin="cockpit-button-text" position="0 0 0.02" n-text="text: be able to fly;"></a-entity>
+		</a-entity>	
+		<a-entity mixin="cockpit-button" position="0.22 -0.1 0.02"
+			wire="on: click; emit: open-skeleton; targets: #question1-bg, #question1-text, #question1-button1-text, #question1-button1, #question1-button2-text;"
+			wire__close="on: click; emit: close; targets: #menu1-button, #menu1;"
+			wire__next="on: click; emit: open; targets: #menu2-button;"
+			wire__confirmation="on: click; emit: open-confirmation; targets: #confirmation;">
+			<a-entity mixin="cockpit-button-text" position="0 0 0.02" n-text="text: be invisible;"></a-entity>
+		</a-entity>		
+		<a-entity
+			position="0 -0.35 0"
+			scale="0.05 0.05 0.05"
+			geometry="primitive: circle" material="transparent: true; src: #close"
+			n-cockpit-parent altspace-cursor-collider="enabled: true"
+			wire="on: click; emit: toggle-menu; targets: #menu1">
 		</a-entity>
 	</a-entity>
 	
@@ -175,6 +173,123 @@
 			geometry="primitive: circle" material="transparent: true; src: #close"
 			n-cockpit-parent altspace-cursor-collider="enabled: true"
 			wire="on: click; emit: toggle-menu; targets: #menu2">
+		</a-entity>
+	</a-entity>
+	
+	<!-- Button 3 -->
+	<a-entity id="menu3-button" position="0.5 -0.2 -1" scale="0.0001 0.0001 0.0001" 
+		geometry="primitive: plane; width: 0.4; height: 0.1" material="color: #1eced5; opacity: 0.8"
+		wire="on: click; emit: toggle-menu; targets: #menu3;"
+		n-cockpit-parent altspace-cursor-collider="enabled: true">
+		<a-animation attribute="scale" begin="open" delay="120000" dur="1" from="0.0001 0.0001 0.0001" to="1 1 1" fill="forwards" direction="normal" repeat="0"></a-animation>
+		<a-animation attribute="scale" begin="close" dur="1" from="1 1 1" to="0.0001 0.0001 0.0001" fill="forwards" direction="normal" repeat="0"></a-animation>
+		<a-entity mixin="cockpit-button-text" position="0 0 0.02" n-text="text: Would you rather;"></a-entity>
+	</a-entity>
+	
+	<!-- Question 3 -->
+	<a-entity id="menu3" position="0 0.6 -1" scale="0.0001 0.0001 0.0001" n-cockpit-parent>
+		<a-animation attribute="scale" begin="toggle-menu" dur="1" from="0.0001 0.0001 0.0001" to="1 1 1" fill="forwards" direction="alternate" repeat="0"></a-animation>
+		<a-animation attribute="scale" begin="close" dur="1" from="1 1 1" to="0.0001 0.0001 0.0001" fill="forwards" direction="normal" repeat="0"></a-animation>
+		<a-entity mixin="cockpit-bg"></a-entity>
+		<a-entity mixin="cockpit-text" n-text="text: Would you rather...;"></a-entity>
+		<a-entity mixin="cockpit-button" position="-0.22 -0.1 0.02"
+			wire="on: click; emit: open-skeleton; targets: #question3-bg, #question3-text, #question3-button2, #question3-button1-text, #question3-button2-text;"
+			wire__close="on: click; emit: close; targets: #menu3-button, #menu3;"
+			wire__next="on: click; emit: open; targets: #menu4-button;"
+			wire__confirmation="on: click; emit: open-confirmation; targets: #confirmation;">
+			<a-entity mixin="cockpit-button-text" position="0 0 0.02" n-text="text: be really smart;"></a-entity>
+		</a-entity>	
+		<a-entity mixin="cockpit-button" position="0.22 -0.1 0.02"
+			wire="on: click; emit: open-skeleton; targets: #question3-bg, #question3-text, #question3-button1-text, #question3-button1, #question3-button2-text;"
+			wire__close="on: click; emit: close; targets: #menu3-button, #menu3;"
+			wire__next="on: click; emit: open; targets: #menu4-button;"
+			wire__confirmation="on: click; emit: open-confirmation; targets: #confirmation;">
+			<a-entity mixin="cockpit-button-text" position="0 0 0.02" n-text="text: be really good looking;"></a-entity>
+		</a-entity>		
+		<a-entity
+			position="0 -0.35 0"
+			scale="0.05 0.05 0.05"
+			geometry="primitive: circle" material="transparent: true; src: #close"
+			n-cockpit-parent altspace-cursor-collider="enabled: true"
+			wire="on: click; emit: toggle-menu; targets: #menu3">
+		</a-entity>
+	</a-entity>
+	
+	<!-- Button 4 -->
+	<a-entity id="menu4-button" position="0.5 -0.2 -1" scale="0.0001 0.0001 0.0001" 
+		geometry="primitive: plane; width: 0.4; height: 0.1" material="color: #1eced5; opacity: 0.8"
+		wire="on: click; emit: toggle-menu; targets: #menu4;"
+		n-cockpit-parent altspace-cursor-collider="enabled: true">
+		<a-animation attribute="scale" begin="open" delay="120000" dur="1" from="0.0001 0.0001 0.0001" to="1 1 1" fill="forwards" direction="normal" repeat="0"></a-animation>
+		<a-animation attribute="scale" begin="close" dur="1" from="1 1 1" to="0.0001 0.0001 0.0001" fill="forwards" direction="normal" repeat="0"></a-animation>
+		<a-entity mixin="cockpit-button-text" position="0 0 0.02" n-text="text: Would you rather;"></a-entity>
+	</a-entity>
+	
+	<!-- Question 4 -->
+	<a-entity id="menu4" position="0 0.6 -1" scale="0.0001 0.0001 0.0001" n-cockpit-parent>
+		<a-animation attribute="scale" begin="toggle-menu" dur="1" from="0.0001 0.0001 0.0001" to="1 1 1" fill="forwards" direction="alternate" repeat="0"></a-animation>
+		<a-animation attribute="scale" begin="close" dur="1" from="1 1 1" to="0.0001 0.0001 0.0001" fill="forwards" direction="normal" repeat="0"></a-animation>
+		<a-entity mixin="cockpit-bg"></a-entity>
+		<a-entity mixin="cockpit-text" n-text="text: Would you rather...;"></a-entity>
+		<a-entity mixin="cockpit-button" position="-0.22 -0.1 0.02"
+			wire="on: click; emit: open-skeleton; targets: #question4-bg, #question4-text, #question4-button2, #question4-button1-text, #question4-button2-text;"
+			wire__close="on: click; emit: close; targets: #menu4-button, #menu4;"
+			wire__next="on: click; emit: open; targets: #menu5-button;"
+			wire__confirmation="on: click; emit: open-confirmation; targets: #confirmation;">
+			<a-entity mixin="cockpit-button-text" position="0 0 0.02" n-text="text: die in a fire;"></a-entity>
+		</a-entity>	
+		<a-entity mixin="cockpit-button" position="0.22 -0.1 0.02"
+			wire="on: click; emit: open-skeleton; targets: #question4-bg, #question4-text, #question4-button1-text, #question4-button1, #question4-button2-text;"
+			wire__close="on: click; emit: close; targets: #menu4-button, #menu4;"
+			wire__next="on: click; emit: open; targets: #menu5-button;"
+			wire__confirmation="on: click; emit: open-confirmation; targets: #confirmation;">
+			<a-entity mixin="cockpit-button-text" position="0 0 0.02" n-text="text: die drowning;"></a-entity>
+		</a-entity>		
+		<a-entity
+			position="0 -0.35 0"
+			scale="0.05 0.05 0.05"
+			geometry="primitive: circle" material="transparent: true; src: #close"
+			n-cockpit-parent altspace-cursor-collider="enabled: true"
+			wire="on: click; emit: toggle-menu; targets: #menu4">
+		</a-entity>
+	</a-entity>
+	
+	<!-- Button 5 -->
+	<a-entity id="menu5-button" position="0.5 -0.2 -1" scale="0.0001 0.0001 0.0001" 
+		geometry="primitive: plane; width: 0.4; height: 0.1" material="color: #1eced5; opacity: 0.8"
+		wire="on: click; emit: toggle-menu; targets: #menu5;"
+		n-cockpit-parent altspace-cursor-collider="enabled: true">
+		<a-animation attribute="scale" begin="open" delay="120000" dur="1" from="0.0001 0.0001 0.0001" to="1 1 1" fill="forwards" direction="normal" repeat="0"></a-animation>
+		<a-animation attribute="scale" begin="close" dur="1" from="1 1 1" to="0.0001 0.0001 0.0001" fill="forwards" direction="normal" repeat="0"></a-animation>
+		<a-entity mixin="cockpit-button-text" position="0 0 0.02" n-text="text: Would you rather;"></a-entity>
+	</a-entity>
+	
+	<!-- Question 5 -->
+	<a-entity id="menu5" position="0 0.6 -1" scale="0.0001 0.0001 0.0001" n-cockpit-parent>
+		<a-animation attribute="scale" begin="toggle-menu" dur="1" from="0.0001 0.0001 0.0001" to="1 1 1" fill="forwards" direction="alternate" repeat="0"></a-animation>
+		<a-animation attribute="scale" begin="close" dur="1" from="1 1 1" to="0.0001 0.0001 0.0001" fill="forwards" direction="normal" repeat="0"></a-animation>
+		<a-entity mixin="cockpit-bg"></a-entity>
+		<a-entity mixin="cockpit-text" n-text="text: Would you rather...;"></a-entity>
+		<a-entity mixin="cockpit-button" position="-0.22 -0.1 0.02"
+			wire="on: click; emit: open-skeleton; targets: #question5-bg, #question5-text, #question5-button2, #question5-button1-text, #question5-button2-text;"
+			wire__close="on: click; emit: close; targets: #menu5-button, #menu5;"
+			wire__next="on: click; emit: open; targets: #menu6-button;"
+			wire__confirmation="on: click; emit: open-confirmation; targets: #confirmation;">
+			<a-entity mixin="cockpit-button-text" position="0 0 0.02" n-text="text: drink spoiled milk;"></a-entity>
+		</a-entity>	
+		<a-entity mixin="cockpit-button" position="0.22 -0.1 0.02"
+			wire="on: click; emit: open-skeleton; targets: #question5-bg, #question5-text, #question5-button1-text, #question5-button1, #question5-button2-text;"
+			wire__close="on: click; emit: close; targets: #menu5-button, #menu5;"
+			wire__next="on: click; emit: open; targets: #menu6-button;"
+			wire__confirmation="on: click; emit: open-confirmation; targets: #confirmation;">
+			<a-entity mixin="cockpit-button-text" position="0 0 0.02" n-text="text: eat moldy bread;"></a-entity>
+		</a-entity>		
+		<a-entity
+			position="0 -0.35 0"
+			scale="0.05 0.05 0.05"
+			geometry="primitive: circle" material="transparent: true; src: #close"
+			n-cockpit-parent altspace-cursor-collider="enabled: true"
+			wire="on: click; emit: toggle-menu; targets: #menu5">
 		</a-entity>
 	</a-entity>
 	
