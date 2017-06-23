@@ -99,6 +99,24 @@
 		</a-entity>
 	</a-entity>
 	
+	<a-entity id="final-confirmation" position="0 0.6 -1" scale="0.0001 0.0001 0.0001" n-cockpit-parent>
+		<a-animation attribute="scale" begin="open-confirmation" dur="1" from="0.0001 0.0001 0.0001" to="1 1 1" fill="forwards" direction="normal" repeat="0"></a-animation>
+		<a-animation attribute="scale" begin="close-confirmation" dur="1" from="1 1 1" to="0.0001 0.0001 0.0001" fill="forwards" direction="normal" repeat="0"></a-animation>
+		<a-entity mixin="cockpit-bg"></a-entity>
+		<a-entity mixin="cockpit-text" position="0 0.06 0.02" n-text="text: <b>Thanks for playing!</b><br>More questions coming soon;"></a-entity>
+		<a-entity mixin="cockpit-button" position="0 -0.15 0.02" 
+			wire="on: click; emit: close-confirmation; targets: #final-confirmation;">
+			<a-entity mixin="cockpit-button-text" position="0 0 0.02" n-text="text: Got it;"></a-entity>
+		</a-entity>		
+		<a-entity
+			position="0 -0.35 0"
+			scale="0.05 0.05 0.05"
+			geometry="primitive: circle" material="transparent: true; src: #close"
+			n-cockpit-parent altspace-cursor-collider="enabled: true"
+			wire="on: click; emit: close-confirmation; targets: #final-confirmation">
+		</a-entity>
+	</a-entity>
+	
 	<!-- Button 1 -->
 	<a-entity id="menu1-button" position="0.5 -0.2 -1" 
 		geometry="primitive: plane; width: 0.4; height: 0.1" material="color: #1eced5; opacity: 0.8"
@@ -273,15 +291,15 @@
 		<a-entity mixin="cockpit-button" position="-0.22 -0.1 0.02"
 			wire="on: click; emit: open-skeleton; targets: #question5-bg, #question5-text, #question5-button2, #question5-button1-text, #question5-button2-text;"
 			wire__close="on: click; emit: close; targets: #menu5-button, #menu5;"
-			wire__next="on: click; emit: open; targets: #menu6-button;"
-			wire__confirmation="on: click; emit: open-confirmation; targets: #confirmation;">
+			wire__next="on: click; emit: close-skeleton; targets: #question5-bg, #question5-text, #question5-button2, #question5-button1-text, #question5-button2-text;"
+			wire__confirmation="on: click; emit: open-confirmation; targets: #final-confirmation;">
 			<a-entity mixin="cockpit-button-text" position="0 0 0.02" n-text="text: drink spoiled milk;"></a-entity>
 		</a-entity>	
 		<a-entity mixin="cockpit-button" position="0.22 -0.1 0.02"
 			wire="on: click; emit: open-skeleton; targets: #question5-bg, #question5-text, #question5-button1-text, #question5-button1, #question5-button2-text;"
 			wire__close="on: click; emit: close; targets: #menu5-button, #menu5;"
-			wire__next="on: click; emit: open; targets: #menu6-button;"
-			wire__confirmation="on: click; emit: open-confirmation; targets: #confirmation;">
+			wire__next="on: click; emit: close-skeleton; targets: #question5-bg, #question5-text, #question5-button2, #question5-button1-text, #question5-button2-text;"
+			wire__confirmation="on: click; emit: open-confirmation; targets: #final-confirmation;">
 			<a-entity mixin="cockpit-button-text" position="0 0 0.02" n-text="text: eat moldy bread;"></a-entity>
 		</a-entity>		
 		<a-entity
@@ -326,12 +344,24 @@
 	<a-entity id="question4-button2-text" instantiator="on: open-skeleton; mixin: skeleton4-button2-text"></a-entity>
 	
 	<!-- Answer 5 -->
-	<a-entity id="question5-bg" instantiator="on: open-skeleton; mixin: skeleton-bg"></a-entity>
-	<a-entity id="question5-text" instantiator="on: open-skeleton; mixin: skeleton-text1"></a-entity>
-	<a-entity id="question5-button1" instantiator="on: open-skeleton; mixin: skeleton-button1"></a-entity>
-	<a-entity id="question5-button1-text" instantiator="on: open-skeleton; mixin: skeleton5-button1-text"></a-entity>
-	<a-entity id="question5-button2" instantiator="on: open-skeleton; mixin: skeleton-button2"></a-entity>
-	<a-entity id="question5-button2-text" instantiator="on: open-skeleton; mixin: skeleton5-button2-text"></a-entity>
+	<a-entity id="question5-bg" instantiator="on: open-skeleton; mixin: skeleton-bg">
+		<a-animation attribute="scale" begin="close-skeleton" delay="120000" dur="1" from="1 1 1" to="0.0001 0.0001 0.0001" fill="forwards" direction="normal" repeat="0"></a-animation>
+	</a-entity>
+	<a-entity id="question5-text" instantiator="on: open-skeleton; mixin: skeleton-text1">
+		<a-animation attribute="scale" begin="close-skeleton" delay="120000" dur="1" from="1 1 1" to="0.0001 0.0001 0.0001" fill="forwards" direction="normal" repeat="0"></a-animation>
+	</a-entity>
+	<a-entity id="question5-button1" instantiator="on: open-skeleton; mixin: skeleton-button1">
+		<a-animation attribute="scale" begin="close-skeleton" delay="120000" dur="1" from="1 1 1" to="0.0001 0.0001 0.0001" fill="forwards" direction="normal" repeat="0"></a-animation>
+	</a-entity>
+	<a-entity id="question5-button1-text" instantiator="on: open-skeleton; mixin: skeleton5-button1-text">
+		<a-animation attribute="scale" begin="close-skeleton" delay="120000" dur="1" from="1 1 1" to="0.0001 0.0001 0.0001" fill="forwards" direction="normal" repeat="0"></a-animation>
+	</a-entity>
+	<a-entity id="question5-button2" instantiator="on: open-skeleton; mixin: skeleton-button2">
+		<a-animation attribute="scale" begin="close-skeleton" delay="120000" dur="1" from="1 1 1" to="0.0001 0.0001 0.0001" fill="forwards" direction="normal" repeat="0"></a-animation>
+	</a-entity>
+	<a-entity id="question5-button2-text" instantiator="on: open-skeleton; mixin: skeleton5-button2-text">
+		<a-animation attribute="scale" begin="close-skeleton" delay="120000" dur="1" from="1 1 1" to="0.0001 0.0001 0.0001" fill="forwards" direction="normal" repeat="0"></a-animation>
+	</a-entity>
 </a-scene>
 </body>
 </html>
