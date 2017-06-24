@@ -130,14 +130,14 @@
 		<a-animation attribute="scale" begin="toggle-menu" dur="1" from="0.0001 0.0001 0.0001" to="1 1 1" fill="forwards" direction="alternate" repeat="0"></a-animation>
 		<a-animation attribute="scale" begin="close" dur="1" from="1 1 1" to="0.0001 0.0001 0.0001" fill="forwards" direction="normal" repeat="0"></a-animation>
 		<a-entity mixin="cockpit-bg"></a-entity>
-		<a-entity mixin="cockpit-button" position="-0.22 -0.1 0.02"
+		<a-entity mixin="cockpit-button" position="-0.22 -0.08 0.02"
 			wire="on: click; emit: open-skeleton; targets: #question1-bg, #question1-button2, #question1-button1-text, #question1-button2-text;"
 			wire__close="on: click; emit: close; targets: #menu1-button, #menu1;"
 			wire__next="on: click; emit: open; targets: #menu2-button;"
 			wire__confirmation="on: click; emit: open-confirmation; targets: #confirmation;">
 			<a-entity mixin="cockpit-button-text" position="0 0 0.02" n-text="text: know WHEN you'll die;"></a-entity>
 		</a-entity>	
-		<a-entity mixin="cockpit-button" position="0.22 -0.1 0.02"
+		<a-entity mixin="cockpit-button" position="0.22 -0.08 0.02"
 			wire="on: click; emit: open-skeleton; targets: #question1-bg, #question1-button1-text, #question1-button1, #question1-button2-text;"
 			wire__close="on: click; emit: close; targets: #menu1-button, #menu1;"
 			wire__next="on: click; emit: open; targets: #menu2-button;"
