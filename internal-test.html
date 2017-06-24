@@ -8,6 +8,7 @@
 <a-scene altspace="fullspace: true" sync-system="author: phil; app: icebreaker">
 	<a-assets>
 		<img id="close" src="icon-close.png">
+		<img id="button" src="wur-button.png">
 		<a-mixin id="cockpit-bg"
 			geometry="primitive: plane; width: 1; height: 0.5" material="color: black; opacity: 0.8"
 			n-cockpit-parent altspace-cursor-collider="enabled: true"></a-mixin>
@@ -15,7 +16,7 @@
 			n-text="fontSize: 2; horizontalAlign: middle"
 			position="0 0.1 0.02" scale="0.3 0.3 0.3" n-cockpit-parent></a-mixin>
 		<a-mixin id="cockpit-button"
-			geometry="primitive: plane; width: 0.4; height: 0.1;" material="color: #1eced5"
+			geometry="primitive: plane; width: 0.4; height: 0.1;" material="transparent: true; src: #button"
 			n-cockpit-parent altspace-cursor-collider="enabled: true"></a-mixin>
 		<a-mixin id="cockpit-button-text"
 			n-text="fontSize: 2; horizontalAlign: middle"
@@ -119,7 +120,7 @@
 	
 	<!-- Button 1 -->
 	<a-entity id="menu1-button" position="0.5 -0.2 -1" 
-		geometry="primitive: plane; width: 0.4; height: 0.1" material="color: #1eced5; opacity: 0.8"
+		geometry="primitive: plane; width: 0.4; height: 0.1" material="transparent: true; src: #button"
 		wire="on: click; emit: toggle-menu; targets: #menu1;"
 		n-cockpit-parent altspace-cursor-collider="enabled: true">
 		<a-animation attribute="scale" begin="close" dur="1" from="1 1 1" to="0.0001 0.0001 0.0001" fill="forwards" direction="normal" repeat="0"></a-animation>
@@ -157,7 +158,7 @@
 	
 	<!-- Button 2 -->
 	<a-entity id="menu2-button" position="0.5 -0.2 -1" scale="0.0001 0.0001 0.0001" 
-		geometry="primitive: plane; width: 0.4; height: 0.1" material="color: #1eced5; opacity: 0.8"
+		geometry="primitive: plane; width: 0.4; height: 0.1" material="transparent: true; src: #button"
 		wire="on: click; emit: toggle-menu; targets: #menu2;"
 		n-cockpit-parent altspace-cursor-collider="enabled: true">
 		<a-animation attribute="scale" begin="open" delay="60000" dur="1" from="0.0001 0.0001 0.0001" to="1 1 1" fill="forwards" direction="normal" repeat="0"></a-animation>
@@ -196,7 +197,7 @@
 	
 	<!-- Button 3 -->
 	<a-entity id="menu3-button" position="0.5 -0.2 -1" scale="0.0001 0.0001 0.0001" 
-		geometry="primitive: plane; width: 0.4; height: 0.1" material="color: #1eced5; opacity: 0.8"
+		geometry="primitive: plane; width: 0.4; height: 0.1" material="transparent: true; src: #button"
 		wire="on: click; emit: toggle-menu; targets: #menu3;"
 		n-cockpit-parent altspace-cursor-collider="enabled: true">
 		<a-animation attribute="scale" begin="open" delay="60000" dur="1" from="0.0001 0.0001 0.0001" to="1 1 1" fill="forwards" direction="normal" repeat="0"></a-animation>
@@ -235,7 +236,7 @@
 	
 	<!-- Button 4 -->
 	<a-entity id="menu4-button" position="0.5 -0.2 -1" scale="0.0001 0.0001 0.0001" 
-		geometry="primitive: plane; width: 0.4; height: 0.1" material="color: #1eced5; opacity: 0.8"
+		geometry="primitive: plane; width: 0.4; height: 0.1" material="transparent: true; src: #button"
 		wire="on: click; emit: toggle-menu; targets: #menu4;"
 		n-cockpit-parent altspace-cursor-collider="enabled: true">
 		<a-animation attribute="scale" begin="open" delay="60000" dur="1" from="0.0001 0.0001 0.0001" to="1 1 1" fill="forwards" direction="normal" repeat="0"></a-animation>
@@ -274,7 +275,7 @@
 	
 	<!-- Button 5 -->
 	<a-entity id="menu5-button" position="0.5 -0.2 -1" scale="0.0001 0.0001 0.0001" 
-		geometry="primitive: plane; width: 0.4; height: 0.1" material="color: #1eced5; opacity: 0.8"
+		geometry="primitive: plane; width: 0.4; height: 0.1" material="transparent: true; src: #button"
 		wire="on: click; emit: toggle-menu; targets: #menu5;"
 		n-cockpit-parent altspace-cursor-collider="enabled: true">
 		<a-animation attribute="scale" begin="open" delay="60000" dur="1" from="0.0001 0.0001 0.0001" to="1 1 1" fill="forwards" direction="normal" repeat="0"></a-animation>
