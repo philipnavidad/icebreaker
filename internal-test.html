@@ -160,10 +160,8 @@
 	</a-entity>
 	
 	<!-- Button 2 -->
-	<a-entity id="menu2-button" position="0.5 -0.2 -1" scale="0.0001 0.0001 0.0001" 
-		geometry="primitive: plane; width: 0.4; height: 0.1" material="transparent: true; src: #button"
-		wire="on: click; emit: toggle-menu; targets: #menu2;"
-		n-cockpit-parent altspace-cursor-collider="enabled: true">
+	<a-entity id="menu2-button" mixin="menu-button"
+		wire="on: click; emit: toggle-menu; targets: #menu2;">
 		<a-animation attribute="scale" begin="open" delay="60000" dur="1" from="0.0001 0.0001 0.0001" to="1 1 1" fill="forwards" direction="normal" repeat="0"></a-animation>
 		<a-animation attribute="scale" begin="close" dur="1" from="1 1 1" to="0.0001 0.0001 0.0001" fill="forwards" direction="normal" repeat="0"></a-animation>
 	</a-entity>
@@ -197,10 +195,8 @@
 	</a-entity>
 	
 	<!-- Button 3 -->
-	<a-entity id="menu3-button" position="0.5 -0.2 -1" scale="0.0001 0.0001 0.0001" 
-		geometry="primitive: plane; width: 0.4; height: 0.1" material="transparent: true; src: #button"
-		wire="on: click; emit: toggle-menu; targets: #menu3;"
-		n-cockpit-parent altspace-cursor-collider="enabled: true">
+	<a-entity id="menu3-button" mixin="menu-button"
+		wire="on: click; emit: toggle-menu; targets: #menu3;">
 		<a-animation attribute="scale" begin="open" delay="60000" dur="1" from="0.0001 0.0001 0.0001" to="1 1 1" fill="forwards" direction="normal" repeat="0"></a-animation>
 		<a-animation attribute="scale" begin="close" dur="1" from="1 1 1" to="0.0001 0.0001 0.0001" fill="forwards" direction="normal" repeat="0"></a-animation>
 	</a-entity>
@@ -234,10 +230,8 @@
 	</a-entity>
 	
 	<!-- Button 4 -->
-	<a-entity id="menu4-button" position="0.5 -0.2 -1" scale="0.0001 0.0001 0.0001" 
-		geometry="primitive: plane; width: 0.4; height: 0.1" material="transparent: true; src: #button"
-		wire="on: click; emit: toggle-menu; targets: #menu4;"
-		n-cockpit-parent altspace-cursor-collider="enabled: true">
+	<a-entity id="menu4-button" mixin="menu-button"
+		wire="on: click; emit: toggle-menu; targets: #menu4;">
 		<a-animation attribute="scale" begin="open" delay="60000" dur="1" from="0.0001 0.0001 0.0001" to="1 1 1" fill="forwards" direction="normal" repeat="0"></a-animation>
 		<a-animation attribute="scale" begin="close" dur="1" from="1 1 1" to="0.0001 0.0001 0.0001" fill="forwards" direction="normal" repeat="0"></a-animation>
 	</a-entity>
@@ -271,10 +265,8 @@
 	</a-entity>
 	
 	<!-- Button 5 -->
-	<a-entity id="menu5-button" position="0.5 -0.2 -1" scale="0.0001 0.0001 0.0001" 
-		geometry="primitive: plane; width: 0.4; height: 0.1" material="transparent: true; src: #button"
-		wire="on: click; emit: toggle-menu; targets: #menu5;"
-		n-cockpit-parent altspace-cursor-collider="enabled: true">
+	<a-entity id="menu5-button" mixin="menu-button"
+		wire="on: click; emit: toggle-menu; targets: #menu5;">
 		<a-animation attribute="scale" begin="open" delay="60000" dur="1" from="0.0001 0.0001 0.0001" to="1 1 1" fill="forwards" direction="normal" repeat="0"></a-animation>
 		<a-animation attribute="scale" begin="close" dur="1" from="1 1 1" to="0.0001 0.0001 0.0001" fill="forwards" direction="normal" repeat="0"></a-animation>
 	</a-entity>
