@@ -12,6 +12,7 @@
 		<img id="cockpit" src="cockpit_bg.png">
 		<img id="skeleton" src="skeleton_bg.png">
 		<img id="got-it" src="got_it.png">
+		<img id="bg-plane" src="bg_plane.png">
 		<a-mixin id="cockpit-bg"
 			geometry="primitive: plane; width: 1; height: 0.5" material="transparent: true; src: #cockpit"
 			n-cockpit-parent altspace-cursor-collider="enabled: true"></a-mixin>
@@ -84,7 +85,7 @@
 	<a-entity id="confirmation" position="0 0.6 -1" scale="0.0001 0.0001 0.0001" n-cockpit-parent>
 		<a-animation attribute="scale" begin="open-confirmation" dur="1" from="0.0001 0.0001 0.0001" to="1 1 1" fill="forwards" direction="normal" repeat="0"></a-animation>
 		<a-animation attribute="scale" begin="close-confirmation" dur="1" from="1 1 1" to="0.0001 0.0001 0.0001" fill="forwards" direction="normal" repeat="0"></a-animation>
-		<a-entity mixin="cockpit-bg"></a-entity>
+		<a-entity mixin="cockpit-bg" material="transparent: true; src: #bg-plane"></a-entity>
 		<a-entity mixin="cockpit-text" position="0 0.06 0.02" n-text="text: <b>GOOD CHOICE!</b><br>The next question will be<br>available in 1 minute;"></a-entity>
 		<a-entity mixin="cockpit-button" position="0 -0.15 0.02" material="transparent: true; src: #got-it" 
 			wire="on: click; emit: close-confirmation; targets: #confirmation;">
@@ -101,7 +102,7 @@
 	<a-entity id="final-confirmation" position="0 0.6 -1" scale="0.0001 0.0001 0.0001" n-cockpit-parent>
 		<a-animation attribute="scale" begin="open-confirmation" dur="1" from="0.0001 0.0001 0.0001" to="1 1 1" fill="forwards" direction="normal" repeat="0"></a-animation>
 		<a-animation attribute="scale" begin="close-confirmation" dur="1" from="1 1 1" to="0.0001 0.0001 0.0001" fill="forwards" direction="normal" repeat="0"></a-animation>
-		<a-entity mixin="cockpit-bg"></a-entity>
+		<a-entity mixin="cockpit-bg" material="transparent: true; src: #bg-plane"></a-entity>
 		<a-entity mixin="cockpit-text" position="0 0.06 0.02" n-text="text: <b>Thanks for playing!</b><br>More questions coming soon;"></a-entity>
 		<a-entity mixin="cockpit-button" position="0 -0.15 0.02" material="transparent: true; src: #got-it" 
 			wire="on: click; emit: close-confirmation; targets: #final-confirmation;">
