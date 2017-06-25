@@ -128,6 +128,12 @@
 		<a-animation attribute="scale" begin="close" dur="1" from="1 1 1" to="0.0001 0.0001 0.0001" fill="forwards" direction="normal" repeat="0"></a-animation>
 	</a-entity>
 	
+	<a-entity id="menu1-sound" 
+		geometry="primitive: plane; width: 0.1; height: 0.1" material="transparent: true;"
+	  	n-sound="src: notify.wav; autoplay: true;"
+		n-skeleton-parent="part: head;">
+	</a-entity>
+	
 	<!-- Question 1 -->
 	<a-entity id="menu1" position="0 0.6 -1" scale="0.0001 0.0001 0.0001" n-cockpit-parent>
 		<a-animation attribute="scale" begin="toggle-menu" dur="1" from="0.0001 0.0001 0.0001" to="1 1 1" fill="forwards" direction="alternate" repeat="0"></a-animation>
