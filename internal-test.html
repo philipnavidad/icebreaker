@@ -87,9 +87,9 @@
 		<a-mixin id='cockpit-timer'
 			position="0.5 0 -1" rotation='0 0 0'
 			n-text='text: 00:00; font-size: 1; width: 1; height: 0.1'
-			timer='duration: 60'
+			timer="duration: 60; autostart: true;"
 			n-cockpit-parent
-			wire='on: timerend; emit: timerend; targets: .mine[display-phrase]'></a-mixin>
+			wire="on: timerend; emit: timerend;"></a-mixin>
 	</a-assets>
 	
 	<a-entity mixin="cockpit-timer"></a-entity>
