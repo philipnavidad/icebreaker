@@ -142,7 +142,7 @@
 		<a-entity mixin="cockpit-button" position="-0.22 -0.08 0.02"
 			wire="on: click; emit: open-skeleton; targets: #question1-bg, #question1-button2, #question1-button1-text, #question1-button2-text;"
 			wire__close="on: click; emit: close; targets: #menu1-button, #menu1;"
-			wire__next="on: click; emit: open; targets: #menu2-button;"
+			wire__next="on: click; emit: open; targets: #menu2-button, #menu2-sound;"
 			wire__confirmation="on: click; emit: open-confirmation; targets: #confirmation;">
 			<a-entity mixin="cockpit-button-text" position="0 0 0.02" n-text="text: know <b><i>WHEN</i></b><br>you'll die;"></a-entity>
 		</a-entity>	
