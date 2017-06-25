@@ -149,7 +149,7 @@
 		<a-entity mixin="cockpit-button" position="0.22 -0.08 0.02"
 			wire="on: click; emit: open-skeleton; targets: #question1-bg, #question1-button1-text, #question1-button1, #question1-button2-text;"
 			wire__close="on: click; emit: close; targets: #menu1-button, #menu1;"
-			wire__next="on: click; emit: open; targets: #menu2-button;"
+			wire__next="on: click; emit: open; targets: #menu2-button, #menu2-sound;"
 			wire__confirmation="on: click; emit: open-confirmation; targets: #confirmation;">
 			<a-entity mixin="cockpit-button-text" position="0 0 0.02" n-text="text: know <b><i>HOW</i></b><br>you'll die;"></a-entity>
 		</a-entity>		
@@ -169,10 +169,13 @@
 		n-cockpit-parent altspace-cursor-collider="enabled: true">
 		<a-animation attribute="scale" begin="open" delay="60000" dur="1" from="0.0001 0.0001 0.0001" to="1 1 1" fill="forwards" direction="normal" repeat="0"></a-animation>
 		<a-animation attribute="scale" begin="close" dur="1" from="1 1 1" to="0.0001 0.0001 0.0001" fill="forwards" direction="normal" repeat="0"></a-animation>
-		<a-entity id="menu2-sound" 
+	</a-entity>
+	
+	<a-entity id="menu2-sound" 
 		geometry="primitive: plane; width: 0.1; height: 0.1" material="transparent: true;"
-	  	n-sound="src: notify.wav;"
-		n-skeleton-parent="part: head;"></a-entity>
+	  	n-sound="src: notify.wav; on: animationend"
+		n-skeleton-parent="part: head;">
+		<a-animation attribute="scale" begin="open" delay="60000" dur="1" from="0.0001 0.0001 0.0001" to="1 1 1" fill="forwards" direction="normal" repeat="0"></a-animation>
 	</a-entity>
 	
 	<!-- Question 2 -->
