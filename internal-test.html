@@ -114,10 +114,10 @@
 			n-cockpit-parent altspace-cursor-collider="enabled: true"
 			wire="on: click; emit: close-confirmation; targets: #confirmation"
 			wire__over="on: mouseenter; emit: over; target: #close-hover;"
-			wire__leave="on: mouseleave; emit: leave; #close-hover;">
+			wire__leave="on: mouseleave; emit: leave; target: #close-hover;">
 		</a-entity>
 		<a-entity id="close-hover"
-			position="0 -0.35 -0.01"
+			position="0 -0.35 0"
 			scale="0.0001 0.0001 0.0001"
 			geometry="primitive: circle" material="color: white; opacity: 0.5;"
 			n-cockpit-parent altspace-cursor-collider="enabled: true">
