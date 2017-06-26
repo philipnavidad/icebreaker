@@ -260,19 +260,37 @@
 		<a-animation attribute="scale" begin="close" dur="1" from="1 1 1" to="0.0001 0.0001 0.0001" fill="forwards" direction="normal" repeat="0"></a-animation>
 		<a-entity mixin="cockpit-bg"></a-entity>
 		<a-entity mixin="cockpit-button" position="-0.22 -0.1 0.02"
+		  	wire__over="on: mouseenter; emit: over; target: #cockpit2-button1-hover;"
+			wire__leave="on: mouseleave; emit: leave; target: #cockpit2-button1-hover;"
 			wire="on: click; emit: open-skeleton; targets: #question2-bg, #question2-button2, #question2-button1-text, #question2-button2-text;"
 			wire__close="on: click; emit: close; targets: #menu2-button, #menu2;"
 			wire__next="on: click; emit: open; targets: #menu3-button, #menu3-sound;"
 			wire__confirmation="on: click; emit: open-confirmation; targets: #confirmation;">
 			<a-entity mixin="cockpit-button-text" position="0 0 0.02" n-text="text: be <b><i>RICH</i></b><br> but hated;"></a-entity>
-		</a-entity>	
+		</a-entity>
+		<a-entity id="cockpit2-button1-hover" mixin="cockpit-button" 
+		  	position="-0.22 -0.08 0.021" scale="0.0001 0.0001 0.0001" 
+		  	material="transparent: true; src: #answer-button-hover"
+		  	altspace-cursor-collider="enabled: false">
+			<a-animation attribute="scale" begin="over" dur="1" from="0.0001 0.0001 0.0001" to="1 1 1" fill="forwards" direction="normal" repeat="0"></a-animation>
+			<a-animation attribute="scale" begin="leave" dur="1" from="1 1 1" to="0.0001 0.0001 0.0001" fill="forwards" direction="normal" repeat="0"></a-animation>
+	  	</a-entity>
 		<a-entity mixin="cockpit-button" position="0.22 -0.1 0.02"
+		  	wire__over="on: mouseenter; emit: over; target: #cockpit2-button2-hover;"
+			wire__leave="on: mouseleave; emit: leave; target: #cockpit2-button2-hover;"
 			wire="on: click; emit: open-skeleton; targets: #question2-bg, #question2-button1-text, #question2-button1, #question2-button2-text;"
 			wire__close="on: click; emit: close; targets: #menu2-button, #menu2;"
 			wire__next="on: click; emit: open; targets: #menu3-button, #menu3-sound;"
 			wire__confirmation="on: click; emit: open-confirmation; targets: #confirmation;">
 			<a-entity mixin="cockpit-button-text" position="0 0 0.02" n-text="text: be <b><i>POOR</i></b><br> but admired;"></a-entity>
-		</a-entity>		
+		</a-entity>
+		<a-entity id="cockpit2-button2-hover" mixin="cockpit-button" 
+		  	position="-0.22 -0.08 0.021" scale="0.0001 0.0001 0.0001" 
+		  	material="transparent: true; src: #answer-button-hover"
+		  	altspace-cursor-collider="enabled: false">
+			<a-animation attribute="scale" begin="over" dur="1" from="0.0001 0.0001 0.0001" to="1 1 1" fill="forwards" direction="normal" repeat="0"></a-animation>
+			<a-animation attribute="scale" begin="leave" dur="1" from="1 1 1" to="0.0001 0.0001 0.0001" fill="forwards" direction="normal" repeat="0"></a-animation>
+	  	</a-entity>
 		<a-entity
 			position="0 -0.35 0"
 			scale="0.05 0.05 0.05"
@@ -318,19 +336,37 @@
 		<a-animation attribute="scale" begin="close" dur="1" from="1 1 1" to="0.0001 0.0001 0.0001" fill="forwards" direction="normal" repeat="0"></a-animation>
 		<a-entity mixin="cockpit-bg"></a-entity>
 		<a-entity mixin="cockpit-button" position="-0.22 -0.1 0.02"
+		  	wire__over="on: mouseenter; emit: over; target: #cockpit3-button1-hover;"
+			wire__leave="on: mouseleave; emit: leave; target: #cockpit3-button1-hover;"
 			wire="on: click; emit: open-skeleton; targets: #question3-bg, #question3-button2, #question3-button1-text, #question3-button2-text;"
 			wire__close="on: click; emit: close; targets: #menu3-button, #menu3;"
 			wire__next="on: click; emit: open; targets: #menu4-button, #menu4-sound;"
 			wire__confirmation="on: click; emit: open-confirmation; targets: #confirmation;">
 			<a-entity mixin="cockpit-button-text" position="0 0 0.02" n-text="text: live 500 years<br>in the <b><i>FUTURE</i></b>;"></a-entity>
-		</a-entity>	
+		</a-entity>
+		<a-entity id="cockpit3-button1-hover" mixin="cockpit-button" 
+		  	position="-0.22 -0.08 0.021" scale="0.0001 0.0001 0.0001" 
+		  	material="transparent: true; src: #answer-button-hover"
+		  	altspace-cursor-collider="enabled: false">
+			<a-animation attribute="scale" begin="over" dur="1" from="0.0001 0.0001 0.0001" to="1 1 1" fill="forwards" direction="normal" repeat="0"></a-animation>
+			<a-animation attribute="scale" begin="leave" dur="1" from="1 1 1" to="0.0001 0.0001 0.0001" fill="forwards" direction="normal" repeat="0"></a-animation>
+	  	</a-entity>
 		<a-entity mixin="cockpit-button" position="0.22 -0.1 0.02"
+		  	wire__over="on: mouseenter; emit: over; target: #cockpit3-button2-hover;"
+			wire__leave="on: mouseleave; emit: leave; target: #cockpit3-button2-hover;"
 			wire="on: click; emit: open-skeleton; targets: #question3-bg, #question3-button1-text, #question3-button1, #question3-button2-text;"
 			wire__close="on: click; emit: close; targets: #menu3-button, #menu3;"
 			wire__next="on: click; emit: open; targets: #menu4-button, #menu4-sound;"
 			wire__confirmation="on: click; emit: open-confirmation; targets: #confirmation;">
 			<a-entity mixin="cockpit-button-text" position="0 0 0.02" n-text="text: live 500 years<br>in the <b><i>PAST</i></b>;"></a-entity>
-		</a-entity>		
+		</a-entity>
+		<a-entity id="cockpit3-button2-hover" mixin="cockpit-button" 
+		  	position="-0.22 -0.08 0.021" scale="0.0001 0.0001 0.0001" 
+		  	material="transparent: true; src: #answer-button-hover"
+		  	altspace-cursor-collider="enabled: false">
+			<a-animation attribute="scale" begin="over" dur="1" from="0.0001 0.0001 0.0001" to="1 1 1" fill="forwards" direction="normal" repeat="0"></a-animation>
+			<a-animation attribute="scale" begin="leave" dur="1" from="1 1 1" to="0.0001 0.0001 0.0001" fill="forwards" direction="normal" repeat="0"></a-animation>
+	  	</a-entity>
 		<a-entity
 			position="0 -0.35 0"
 			scale="0.05 0.05 0.05"
@@ -376,19 +412,37 @@
 		<a-animation attribute="scale" begin="close" dur="1" from="1 1 1" to="0.0001 0.0001 0.0001" fill="forwards" direction="normal" repeat="0"></a-animation>
 		<a-entity mixin="cockpit-bg"></a-entity>
 		<a-entity mixin="cockpit-button" position="-0.22 -0.1 0.02"
+		  	wire__over="on: mouseenter; emit: over; target: #cockpit4-button1-hover;"
+			wire__leave="on: mouseleave; emit: leave; target: #cockpit4-button1-hover;"
 			wire="on: click; emit: open-skeleton; targets: #question4-bg, #question4-button2, #question4-button1-text, #question4-button2-text;"
 			wire__close="on: click; emit: close; targets: #menu4-button, #menu4;"
 			wire__next="on: click; emit: open; targets: #menu5-button, #menu5-sound;"
 			wire__confirmation="on: click; emit: open-confirmation; targets: #confirmation;">
 			<a-entity mixin="cockpit-button-text" position="0 0 0.02" n-text="text: have terrible<br><b><i>SHORT</i></b> term memory;"></a-entity>
-		</a-entity>	
+		</a-entity>
+		<a-entity id="cockpit4-button1-hover" mixin="cockpit-button" 
+		  	position="-0.22 -0.08 0.021" scale="0.0001 0.0001 0.0001" 
+		  	material="transparent: true; src: #answer-button-hover"
+		  	altspace-cursor-collider="enabled: false">
+			<a-animation attribute="scale" begin="over" dur="1" from="0.0001 0.0001 0.0001" to="1 1 1" fill="forwards" direction="normal" repeat="0"></a-animation>
+			<a-animation attribute="scale" begin="leave" dur="1" from="1 1 1" to="0.0001 0.0001 0.0001" fill="forwards" direction="normal" repeat="0"></a-animation>
+	  	</a-entity>
 		<a-entity mixin="cockpit-button" position="0.22 -0.1 0.02"
+		  	wire__over="on: mouseenter; emit: over; target: #cockpit4-button2-hover;"
+			wire__leave="on: mouseleave; emit: leave; target: #cockpit4-button2-hover;"
 			wire="on: click; emit: open-skeleton; targets: #question4-bg, #question4-button1-text, #question4-button1, #question4-button2-text;"
 			wire__close="on: click; emit: close; targets: #menu4-button, #menu4;"
 			wire__next="on: click; emit: open; targets: #menu5-button, #menu5-sound;"
 			wire__confirmation="on: click; emit: open-confirmation; targets: #confirmation;">
 			<a-entity mixin="cockpit-button-text" position="0 0 0.02" n-text="text: have terrible<br><b><i>LONG</i></b> term memory;"></a-entity>
-		</a-entity>		
+		</a-entity>
+		<a-entity id="cockpit4-button2-hover" mixin="cockpit-button" 
+		  	position="-0.22 -0.08 0.021" scale="0.0001 0.0001 0.0001" 
+		  	material="transparent: true; src: #answer-button-hover"
+		  	altspace-cursor-collider="enabled: false">
+			<a-animation attribute="scale" begin="over" dur="1" from="0.0001 0.0001 0.0001" to="1 1 1" fill="forwards" direction="normal" repeat="0"></a-animation>
+			<a-animation attribute="scale" begin="leave" dur="1" from="1 1 1" to="0.0001 0.0001 0.0001" fill="forwards" direction="normal" repeat="0"></a-animation>
+	  	</a-entity>
 		<a-entity
 			position="0 -0.35 0"
 			scale="0.05 0.05 0.05"
@@ -434,19 +488,37 @@
 		<a-animation attribute="scale" begin="close" dur="1" from="1 1 1" to="0.0001 0.0001 0.0001" fill="forwards" direction="normal" repeat="0"></a-animation>
 		<a-entity mixin="cockpit-bg"></a-entity>
 		<a-entity mixin="cockpit-button" position="-0.22 -0.1 0.02"
+		  	wire__over="on: mouseenter; emit: over; target: #cockpit5-button1-hover;"
+			wire__leave="on: mouseleave; emit: leave; target: #cockpit5-button1-hover;"
 			wire="on: click; emit: open-skeleton; targets: #question5-bg, #question5-button2, #question5-button1-text, #question5-button2-text;"
 			wire__close="on: click; emit: close; targets: #menu5-button, #menu5;"
 			wire__next="on: click; emit: close-skeleton; targets: #question5;"
 			wire__confirmation="on: click; emit: open-confirmation; targets: #final-confirmation;">
 			<a-entity mixin="cockpit-button-text" position="0 0 0.02" n-text="text: be able to<br>control <b><i>WATER</i></b>;"></a-entity>
-		</a-entity>	
+		</a-entity>
+		<a-entity id="cockpit5-button1-hover" mixin="cockpit-button" 
+		  	position="-0.22 -0.08 0.021" scale="0.0001 0.0001 0.0001" 
+		  	material="transparent: true; src: #answer-button-hover"
+		  	altspace-cursor-collider="enabled: false">
+			<a-animation attribute="scale" begin="over" dur="1" from="0.0001 0.0001 0.0001" to="1 1 1" fill="forwards" direction="normal" repeat="0"></a-animation>
+			<a-animation attribute="scale" begin="leave" dur="1" from="1 1 1" to="0.0001 0.0001 0.0001" fill="forwards" direction="normal" repeat="0"></a-animation>
+	  	</a-entity>
 		<a-entity mixin="cockpit-button" position="0.22 -0.1 0.02"
+			wire__over="on: mouseenter; emit: over; target: #cockpit5-button2-hover;"
+			wire__leave="on: mouseleave; emit: leave; target: #cockpit5-button2-hover;"
 			wire="on: click; emit: open-skeleton; targets: #question5-bg, #question5-button1-text, #question5-button1, #question5-button2-text;"
 			wire__close="on: click; emit: close; targets: #menu5-button, #menu5;"
 			wire__next="on: click; emit: close-skeleton; targets: #question5;"
 			wire__confirmation="on: click; emit: open-confirmation; targets: #final-confirmation;">
 			<a-entity mixin="cockpit-button-text" position="0 0 0.02" n-text="text: be able to<br>control <b><i>FIRE</i></b>;"></a-entity>
-		</a-entity>		
+		</a-entity>
+		<a-entity id="cockpit5-button2-hover" mixin="cockpit-button" 
+		  	position="-0.22 -0.08 0.021" scale="0.0001 0.0001 0.0001" 
+		  	material="transparent: true; src: #answer-button-hover"
+		  	altspace-cursor-collider="enabled: false">
+			<a-animation attribute="scale" begin="over" dur="1" from="0.0001 0.0001 0.0001" to="1 1 1" fill="forwards" direction="normal" repeat="0"></a-animation>
+			<a-animation attribute="scale" begin="leave" dur="1" from="1 1 1" to="0.0001 0.0001 0.0001" fill="forwards" direction="normal" repeat="0"></a-animation>
+	  	</a-entity>
 		<a-entity
 			position="0 -0.35 0"
 			scale="0.05 0.05 0.05"
