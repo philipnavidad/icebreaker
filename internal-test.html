@@ -16,6 +16,7 @@
 		<img id="got-it" src="got_it.png">
 		<img id="bg-plane" src="bg_plane.png">
 		<img id="answer-button" src="answer_button.png">
+		<img id="correct-answer-button" src="correct_answer_button.png">
 		<img id="answer-button-hover" src="answer_button_hover.png">
 		<a-mixin id="confirm-button"
 			geometry="primitive: plane; width: 0.4; height: 0.1;" material="transparent: true; src: #got-it"
@@ -39,12 +40,12 @@
 			sync sync-n-skeleton-parent></a-mixin>
 		<a-mixin id="skeleton-button1"
 			position="-0.22 0.4 -0.02" rotation="0 180 0"
-		 	geometry="primitive: plane; width: 0.4; height: 0.2;" material="transparent: true; src: #answer-button"
+		 	geometry="primitive: plane; width: 0.4; height: 0.2;" material="transparent: true; src: #correct-answer-button"
 			n-skeleton-parent="part: head;" sync sync-n-skeleton-parent
 			altspace-cursor-collider="enabled: true"></a-mixin>
 		<a-mixin id="skeleton-button2"
 			position="0.22 0.4 -0.02" rotation="0 180 0"
-		 	geometry="primitive: plane; width: 0.4; height: 0.2;" material="transparent: true; src: #answer-button"
+		 	geometry="primitive: plane; width: 0.4; height: 0.2;" material="transparent: true; src: #correct-answer-button"
 			n-skeleton-parent="part: head;" sync sync-n-skeleton-parent
 			altspace-cursor-collider="enabled: true"></a-mixin>
 		<a-mixin id="skeleton1-button1-text"
