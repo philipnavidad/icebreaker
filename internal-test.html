@@ -190,7 +190,17 @@
 			scale="0.05 0.05 0.05"
 			geometry="primitive: circle" material="transparent: true; src: #close"
 			n-cockpit-parent altspace-cursor-collider="enabled: true"
-			wire="on: click; emit: toggle-menu; targets: #menu1">
+			wire="on: click; emit: toggle-menu; targets: #menu1"
+		  	wire__over="on: mouseenter; emit: over; target: #menu1-close-hover;"
+			wire__leave="on: mouseleave; emit: leave; target: #menu1-close-hover;">
+		</a-entity>
+		<a-entity id="menu1-close-hover"
+			position="0 -0.35 -0.0001"
+			scale="0.0001 0.0001 0.0001"
+			geometry="primitive: circle" material="transparent: true; src: #close2;"
+			n-cockpit-parent altspace-cursor-collider="enabled: true">
+			<a-animation attribute="scale" begin="over" dur="1" from="0.0001 0.0001 0.0001" to="0.05 0.05 0.05" fill="forwards" direction="normal" repeat="0"></a-animation>
+			<a-animation attribute="scale" begin="leave" dur="1" from="0.05 0.05 0.05" to="0.0001 0.0001 0.0001" fill="forwards" direction="normal" repeat="0"></a-animation>
 		</a-entity>
 	</a-entity>
 	
@@ -238,7 +248,17 @@
 			scale="0.05 0.05 0.05"
 			geometry="primitive: circle" material="transparent: true; src: #close"
 			n-cockpit-parent altspace-cursor-collider="enabled: true"
-			wire="on: click; emit: toggle-menu; targets: #menu2">
+			wire="on: click; emit: toggle-menu; targets: #menu2"
+		  	wire__over="on: mouseenter; emit: over; target: #menu2-close-hover;"
+			wire__leave="on: mouseleave; emit: leave; target: #menu2-close-hover;">
+		</a-entity>
+		<a-entity id="menu2-close-hover"
+			position="0 -0.35 -0.0001"
+			scale="0.0001 0.0001 0.0001"
+			geometry="primitive: circle" material="transparent: true; src: #close2;"
+			n-cockpit-parent altspace-cursor-collider="enabled: true">
+			<a-animation attribute="scale" begin="over" dur="1" from="0.0001 0.0001 0.0001" to="0.05 0.05 0.05" fill="forwards" direction="normal" repeat="0"></a-animation>
+			<a-animation attribute="scale" begin="leave" dur="1" from="0.05 0.05 0.05" to="0.0001 0.0001 0.0001" fill="forwards" direction="normal" repeat="0"></a-animation>
 		</a-entity>
 	</a-entity>
 	
@@ -286,7 +306,17 @@
 			scale="0.05 0.05 0.05"
 			geometry="primitive: circle" material="transparent: true; src: #close"
 			n-cockpit-parent altspace-cursor-collider="enabled: true"
-			wire="on: click; emit: toggle-menu; targets: #menu3">
+			wire="on: click; emit: toggle-menu; targets: #menu3"
+		  	wire__over="on: mouseenter; emit: over; target: #menu3-close-hover;"
+			wire__leave="on: mouseleave; emit: leave; target: #menu3-close-hover;">
+		</a-entity>
+		<a-entity id="menu3-close-hover"
+			position="0 -0.35 -0.0001"
+			scale="0.0001 0.0001 0.0001"
+			geometry="primitive: circle" material="transparent: true; src: #close2;"
+			n-cockpit-parent altspace-cursor-collider="enabled: true">
+			<a-animation attribute="scale" begin="over" dur="1" from="0.0001 0.0001 0.0001" to="0.05 0.05 0.05" fill="forwards" direction="normal" repeat="0"></a-animation>
+			<a-animation attribute="scale" begin="leave" dur="1" from="0.05 0.05 0.05" to="0.0001 0.0001 0.0001" fill="forwards" direction="normal" repeat="0"></a-animation>
 		</a-entity>
 	</a-entity>
 	
@@ -334,7 +364,17 @@
 			scale="0.05 0.05 0.05"
 			geometry="primitive: circle" material="transparent: true; src: #close"
 			n-cockpit-parent altspace-cursor-collider="enabled: true"
-			wire="on: click; emit: toggle-menu; targets: #menu4">
+			wire="on: click; emit: toggle-menu; targets: #menu4"
+		  	wire__over="on: mouseenter; emit: over; target: #menu4-close-hover;"
+			wire__leave="on: mouseleave; emit: leave; target: #menu4-close-hover;">
+		</a-entity>
+		<a-entity id="menu4-close-hover"
+			position="0 -0.35 -0.0001"
+			scale="0.0001 0.0001 0.0001"
+			geometry="primitive: circle" material="transparent: true; src: #close2;"
+			n-cockpit-parent altspace-cursor-collider="enabled: true">
+			<a-animation attribute="scale" begin="over" dur="1" from="0.0001 0.0001 0.0001" to="0.05 0.05 0.05" fill="forwards" direction="normal" repeat="0"></a-animation>
+			<a-animation attribute="scale" begin="leave" dur="1" from="0.05 0.05 0.05" to="0.0001 0.0001 0.0001" fill="forwards" direction="normal" repeat="0"></a-animation>
 		</a-entity>
 	</a-entity>
 	
@@ -382,7 +422,17 @@
 			scale="0.05 0.05 0.05"
 			geometry="primitive: circle" material="transparent: true; src: #close"
 			n-cockpit-parent altspace-cursor-collider="enabled: true"
-			wire="on: click; emit: toggle-menu; targets: #menu5">
+			wire="on: click; emit: toggle-menu; targets: #menu5"
+		  	wire__over="on: mouseenter; emit: over; target: #menu5-close-hover;"
+			wire__leave="on: mouseleave; emit: leave; target: #menu5-close-hover;">
+		</a-entity>
+		<a-entity id="menu5-close-hover"
+			position="0 -0.35 -0.0001"
+			scale="0.0001 0.0001 0.0001"
+			geometry="primitive: circle" material="transparent: true; src: #close2;"
+			n-cockpit-parent altspace-cursor-collider="enabled: true">
+			<a-animation attribute="scale" begin="over" dur="1" from="0.0001 0.0001 0.0001" to="0.05 0.05 0.05" fill="forwards" direction="normal" repeat="0"></a-animation>
+			<a-animation attribute="scale" begin="leave" dur="1" from="0.05 0.05 0.05" to="0.0001 0.0001 0.0001" fill="forwards" direction="normal" repeat="0"></a-animation>
 		</a-entity>
 	</a-entity>
 	
