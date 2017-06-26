@@ -133,7 +133,9 @@
 	<a-entity id="menu1-button" position="0.5 -0.2 -1" 
 		geometry="primitive: plane; width: 0.4; height: 0.1" material="transparent: true; src: #button"
 		wire="on: click; emit: toggle-menu; targets: #menu1;"
+	  	wire__hover="on: mouseover; emit: hover;
 		n-cockpit-parent altspace-cursor-collider="enabled: true">
+		<a-animation attribute="scale" begin="hover" dur="1" from="1 1 1" to="2 2 2" fill="backwards" direction="normal" repeat="0"></a-animation>
 		<a-animation attribute="scale" begin="close" dur="1" from="1 1 1" to="0.0001 0.0001 0.0001" fill="forwards" direction="normal" repeat="0"></a-animation>
 	</a-entity>
 	
