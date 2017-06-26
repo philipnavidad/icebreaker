@@ -133,11 +133,11 @@
 	<a-entity id="menu1-button" position="0.5 -0.2 -1" 
 		geometry="primitive: plane; width: 0.4; height: 0.1" material="transparent: true; src: #button"
 		wire="on: click; emit: toggle-menu; targets: #menu1;"
-	  	wire__over="on: mouseenter; emit: over; target: #menu1-button;"
-		wire__leave="on: mouseleave; emit: leave; target: #menu1-button;"
+	  	wire__over="on: mouseenter; emit: over;"
+		wire__leave="on: mouseleave; emit: leave;"
 		n-cockpit-parent altspace-cursor-collider="enabled: true">
-		<a-animation attribute="scale" begin="over" dur="1" from="1 1 1" to="2 2 2" fill="forwards" direction="normal" repeat="0"></a-animation>
-		<a-animation attribute="scale" begin="leave" dur="1" from="2 2 2" to="1 1 1" fill="forwards" direction="normal" repeat="0"></a-animation>
+		<a-animation attribute="scale" begin="over" dur="1" from="1 1 1" to="1.2 1.2 1.2" fill="forwards" direction="normal" repeat="0"></a-animation>
+		<a-animation attribute="scale" begin="leave" dur="1" from="1.2 1.2 1.2" to="1 1 1" fill="forwards" direction="normal" repeat="0"></a-animation>
 		<a-animation attribute="scale" begin="close" dur="1" from="1 1 1" to="0.0001 0.0001 0.0001" fill="forwards" direction="normal" repeat="0"></a-animation>
 	</a-entity>
 	
