@@ -112,7 +112,17 @@
 			scale="0.05 0.05 0.05"
 			geometry="primitive: circle" material="transparent: true; src: #close"
 			n-cockpit-parent altspace-cursor-collider="enabled: true"
-			wire="on: click; emit: close-confirmation; targets: #confirmation">
+			wire="on: click; emit: close-confirmation; targets: #confirmation"
+		</a-entity>
+		<a-entity
+			position="0 -0.35 0"
+			scale="0.05 0.05 0.05"
+			geometry="primitive: circle" material="color: white; opacity: 0.5;"
+			n-cockpit-parent altspace-cursor-collider="enabled: true"
+		  	wire__over="on: mouseenter; emit: over;"
+			wire__leave="on: mouseleave; emit: leave;">
+			<a-animation attribute="scale" begin="over" dur="100" from="0.0001 0.0001 0.0001" to="1 1 1" fill="forwards" direction="normal" repeat="0"></a-animation>
+			<a-animation attribute="scale" begin="leave" dur="100" from="1 1 1" to="0.0001 0.0001 0.0001" fill="forwards" direction="normal" repeat="0"></a-animation>
 		</a-entity>
 	</a-entity>
 	
