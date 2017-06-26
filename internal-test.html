@@ -101,7 +101,11 @@
 		<a-entity mixin="cockpit-bg" material="transparent: true; src: #bg-plane"></a-entity>
 		<a-entity mixin="cockpit-text" position="0 0.06 0.02" n-text="text: <b>GOOD CHOICE!</b><br>The next question will be<br>available in 1 minute;"></a-entity>
 		<a-entity mixin="confirm-button" 
-			wire="on: click; emit: close-confirmation; targets: #confirmation;">
+			wire="on: click; emit: close-confirmation; targets: #confirmation;"
+		  	wire__over="on: mouseenter; emit: over;"
+			wire__leave="on: mouseleave; emit: leave;">
+			<a-animation attribute="scale" begin="over" dur="100" from="1 1 1" to="1.1 1.1 1.1" fill="forwards" direction="normal" repeat="0"></a-animation>
+			<a-animation attribute="scale" begin="leave" dur="100" from="1.1 1.1 1.1" to="1 1 1" fill="forwards" direction="normal" repeat="0"></a-animation>
 		</a-entity>		
 		<a-entity
 			position="0 -0.35 0"
@@ -136,8 +140,6 @@
 	  	wire__over="on: mouseenter; emit: over;"
 		wire__leave="on: mouseleave; emit: leave;"
 		n-cockpit-parent altspace-cursor-collider="enabled: true">
-		<a-animation attribute="scale" begin="over" dur="100" from="1 1 1" to="1.1 1.1 1.1" fill="forwards" direction="normal" repeat="0"></a-animation>
-		<a-animation attribute="scale" begin="leave" dur="100" from="1.1 1.1 1.1" to="1 1 1" fill="forwards" direction="normal" repeat="0"></a-animation>
 		<a-animation attribute="scale" begin="close" dur="1" from="1 1 1" to="0.0001 0.0001 0.0001" fill="forwards" direction="normal" repeat="0"></a-animation>
 	</a-entity>
 	
