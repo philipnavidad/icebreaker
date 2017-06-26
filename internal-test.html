@@ -146,7 +146,17 @@
 			scale="0.05 0.05 0.05"
 			geometry="primitive: circle" material="transparent: true; src: #close"
 			n-cockpit-parent altspace-cursor-collider="enabled: true"
-			wire="on: click; emit: close-confirmation; targets: #final-confirmation">
+			wire="on: click; emit: close-confirmation; targets: #final-confirmation"
+		  	wire__over="on: mouseenter; emit: over; target: #final-close-hover;"
+			wire__leave="on: mouseleave; emit: leave; target: #final-close-hover;">
+		</a-entity>
+		<a-entity id="final-close-hover"
+			position="0 -0.35 -0.0001"
+			scale="0.0001 0.0001 0.0001"
+			geometry="primitive: circle" material="transparent: true; src: #close2;"
+			n-cockpit-parent altspace-cursor-collider="enabled: true">
+			<a-animation attribute="scale" begin="over" dur="1" from="0.0001 0.0001 0.0001" to="0.05 0.05 0.05" fill="forwards" direction="normal" repeat="0"></a-animation>
+			<a-animation attribute="scale" begin="leave" dur="1" from="0.05 0.05 0.05" to="0.0001 0.0001 0.0001" fill="forwards" direction="normal" repeat="0"></a-animation>
 		</a-entity>
 	</a-entity>
 	
